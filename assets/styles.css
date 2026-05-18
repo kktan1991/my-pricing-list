@@ -135,7 +135,9 @@ select {
 .button:hover,
 .button:focus-visible,
 .lang-toggle:hover,
-.lang-toggle:focus-visible {
+.lang-toggle:focus-visible,
+.whatsapp-link:hover,
+.whatsapp-link:focus-visible {
   transform: translateY(-1px);
 }
 
@@ -149,6 +151,34 @@ select {
 .button-small {
   min-height: 38px;
   padding: 9px 14px;
+}
+
+.whatsapp-link {
+  align-items: center;
+  background: #e9fbf0;
+  border: 1px solid rgba(37, 211, 102, 0.24);
+  border-radius: var(--radius);
+  color: #0b5f32;
+  display: inline-flex;
+  font-size: 0.86rem;
+  font-weight: 850;
+  gap: 7px;
+  min-height: 38px;
+  padding: 8px 12px;
+  transition: transform 160ms ease, background 160ms ease, border 160ms ease;
+  white-space: nowrap;
+}
+
+.whatsapp-link:hover,
+.whatsapp-link:focus-visible {
+  background: #dff8e9;
+  border-color: rgba(37, 211, 102, 0.42);
+}
+
+.whatsapp-icon {
+  flex: 0 0 auto;
+  height: 20px;
+  width: 20px;
 }
 
 .hero,
@@ -641,6 +671,16 @@ pre {
   gap: 16px;
   justify-content: space-between;
   padding: 28px 0 42px;
+}
+
+.footer-whatsapp {
+  color: var(--accent-dark);
+  font-weight: 850;
+}
+
+.footer-whatsapp:hover,
+.footer-whatsapp:focus-visible {
+  color: var(--accent);
 }
 
 .blog-hero,
@@ -1410,12 +1450,18 @@ pre {
   }
 
   .header-actions {
+    flex-wrap: wrap;
     width: 100%;
   }
 
   .header-actions .button,
   .header-actions .lang-toggle {
     flex: 1;
+  }
+
+  .header-actions .whatsapp-link {
+    flex: 1 1 100%;
+    justify-content: center;
   }
 
   .hero {
