@@ -1389,14 +1389,30 @@ pre {
 
 @media (max-width: 960px) {
   .site-header {
-    align-items: flex-start;
-    flex-wrap: wrap;
+    align-items: center;
+    display: grid;
+    gap: 10px 14px;
+    grid-template-columns: minmax(0, 1fr) auto;
+    padding-block: 12px;
   }
 
   .nav {
-    order: 3;
+    grid-column: 1 / -1;
+    grid-row: 2;
     overflow-x: auto;
+    padding-bottom: 2px;
     width: 100%;
+  }
+
+  .brand {
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  .header-actions {
+    grid-column: 2;
+    grid-row: 1;
+    justify-self: end;
   }
 
   .hero,
@@ -1442,26 +1458,55 @@ pre {
   }
 
   .site-header {
-    padding: 14px;
+    gap: 8px 10px;
+    padding: 10px 14px;
   }
 
   .brand {
     min-width: 0;
   }
 
+  .brand-logo {
+    height: 38px;
+    width: 38px;
+  }
+
+  .brand strong {
+    font-size: 0.92rem;
+  }
+
+  .brand small {
+    display: none;
+  }
+
+  .nav {
+    gap: 16px;
+    font-size: 0.86rem;
+  }
+
   .header-actions {
-    flex-wrap: wrap;
-    width: 100%;
+    gap: 6px;
+    width: auto;
   }
 
   .header-actions .button,
   .header-actions .lang-toggle {
-    flex: 1;
+    flex: 0 0 auto;
+    min-height: 38px;
+    padding: 8px 10px;
   }
 
   .header-actions .whatsapp-link {
-    flex: 1 1 100%;
+    border-radius: 999px;
+    height: 38px;
     justify-content: center;
+    min-height: 38px;
+    padding: 8px;
+    width: 38px;
+  }
+
+  .site-header .whatsapp-link span {
+    display: none;
   }
 
   .hero {
