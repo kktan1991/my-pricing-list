@@ -1,6 +1,7 @@
 const translations = {
   zh: {
     navPackages: "配套",
+    navTestimonials: "客户评价",
     navSales: "售前流程",
     navSupport: "售后支持",
     navBlog: "文章",
@@ -38,6 +39,23 @@ const translations = {
     botTitle: "AI Chatbot",
     botSupport: "月费支持 RM 600-1,000",
     botDesc: "客服 chatbot、FAQ bot、文件问答、lead capture 和人工交接。",
+    resultsLabel: "客户成果",
+    resultsTitle: "真实 AI 自动化项目带来的 workflow 成果。",
+    resultsIntro: "好的 AI 项目不是为了炫技，而是节省时间、减少人工检查，并帮助团队做更好的决定。",
+    result1Role: "销售主管 · Incentive 自动化",
+    result1Quote:
+      "“以前计算每月销售 incentive 是我最不喜欢的工作，需要花很多时间做公式和反复检查数据。这个 AI 系统彻底改变了流程。它几秒内完成繁重计算，而且每次都算得准确。对任何销售主管来说，这都是非常省时间的工具！”",
+    result1Tag1: "销售计算",
+    result1Tag2: "公式自动化",
+    result1Tag3: "节省时间",
+    result1Tag4: "准确性",
+    result2Role: "部门主管 · 市场研究与策略支持",
+    result2Quote:
+      "“这个 AI 系统彻底改变了我作为 HOD 的工作方式。在策略层面，它可以即时提取并整理过去需要几天才能完成的市场研究。它为我节省大量时间，让我可以更专注在数据驱动的 coaching 和推动 revenue。”",
+    result2Tag1: "市场研究",
+    result2Tag2: "AI 整理",
+    result2Tag3: "管理支持",
+    result2Tag4: "Revenue focus",
     salesLabel: "售前流程",
     salesTitle: "Lead 如何变成有范围的项目。",
     salesIntro: "第一次沟通不是免费帮客户设计完整方案，而是判断 fit；范围不清楚就进入付费审计。",
