@@ -87,9 +87,49 @@
     });
   });
 
-  /* ---------- intake form + copy buttons ---------- */
+  /* ---------- n8n connection + intake form ---------- */
+  const XIAO_O_WEBHOOK_URL = "https://n8n-kktan.zeabur.app/webhook/0442b812-132b-44bb-964c-6a2ef290962d";
+  const INTAKE_FORM_URL = "https://my-pricing-list.zeabur.app/intake-form";
   const intakeForm = document.querySelector("[data-intake-form]");
   const summaryOut = document.querySelector("[data-summary]");
+
+  function getXiaoOSessionId() {
+    const key = "xiaoOSessionId";
+    let sessionId = localStorage.getItem(key);
+    if (!sessionId) {
+      sessionId = `xiao-o-${Date.now()}-${Math.random().toString(16).slice(2)}`;
+      localStorage.setItem(key, sessionId);
+    }
+    return sessionId;
+  }
+
+  function formToPayload(f) {
+    const data = new FormData(f);
+    const payload = {};
+    for (const name of new Set(data.keys())) {
+      const values = data.getAll(name).filter(Boolean);
+      if (!values.length) continue;
+      payload[name] = values.length === 1 ? values[0] : values;
+    }
+    return payload;
+  }
+
+  async function postToXiaoON8n(payload) {
+    const response = await fetch(XIAO_O_WEBHOOK_URL, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        ...payload,
+        page: window.location.pathname,
+        language: document.documentElement.lang,
+        sessionId: getXiaoOSessionId(),
+        source: "ai-omic-site"
+      })
+    });
+    if (!response.ok) throw new Error(`n8n returned ${response.status}`);
+    return response;
+  }
+
   function buildSummary(f) {
     const data = new FormData(f);
     const lines = ["AI Omic — Requirements", ""];
@@ -104,10 +144,35 @@
     summaryOut.textContent = title + "\n\n" + text;
     summaryOut.classList.add("show");
   }
-  intakeForm?.addEventListener("submit", (e) => {
+  intakeForm?.addEventListener("submit", async (e) => {
     e.preventDefault();
     if (!intakeForm.reportValidity()) return;
-    showSummary(buildSummary(intakeForm), "Submitted — please send this summary to us on WhatsApp so we can reply within 1 business day.");
+    const summary = buildSummary(intakeForm);
+    const submitButton = intakeForm.querySelector('button[type="submit"], input[type="submit"]');
+    const originalLabel = submitButton?.textContent;
+    if (submitButton) {
+      submitButton.disabled = true;
+      submitButton.textContent = "Submitting...";
+    }
+
+    try {
+      await postToXiaoON8n({
+        type: "intake_form",
+        message: summary,
+        fields: formToPayload(intakeForm),
+        intakeUrl: INTAKE_FORM_URL
+      });
+      showSummary(summary, "Submitted to AI Omic. We will reply within 1 business day.");
+      intakeForm.reset();
+    } catch (error) {
+      console.error("[AI Omic] Intake form n8n submission failed:", error);
+      showSummary(summary, "Could not reach n8n. Please send this summary to us on WhatsApp so we can reply within 1 business day.");
+    } finally {
+      if (submitButton) {
+        submitButton.disabled = false;
+        submitButton.textContent = originalLabel;
+      }
+    }
   });
   document.querySelector("[data-copy-summary]")?.addEventListener("click", async () => {
     if (!intakeForm) return;
@@ -469,6 +534,35 @@
     return `${answer}\n\n${lang === "zh" ? "提示：小O 是网站助手，复杂 scope 仍需要 AI Omic 人工确认。" : "Note: Xiao O is a website assistant. Complex scopes still need human confirmation from AI Omic."}`;
   }
 
+  async function readXiaoOResponse(response) {
+    const text = await response.text();
+    if (!text) return {};
+    try {
+      return JSON.parse(text);
+    } catch (error) {
+      return { text };
+    }
+  }
+
+  async function askXiaoO(container, message) {
+    const loading = appendAssistantMessage(container, "assistant", "Thinking...");
+    try {
+      const response = await postToXiaoON8n({
+        type: "chat_message",
+        message,
+        fallback: assistantReply(message),
+        intakeUrl: INTAKE_FORM_URL
+      });
+      const data = await readXiaoOResponse(response);
+      const answer = data.answer || data.output || data.text || data.reply || assistantReply(message);
+      loading.remove();
+      appendAssistantMessage(container, "assistant", answer);
+    } catch (error) {
+      loading.remove();
+      appendAssistantMessage(container, "assistant", assistantReply(message));
+    }
+  }
+
   function appendAssistantMessage(container, role, text) {
     const bubble = document.createElement("div");
     bubble.className = `xiao-message ${role}`;
@@ -490,6 +584,7 @@
     });
     container.appendChild(bubble);
     container.scrollTop = container.scrollHeight;
+    return bubble;
   }
 
   function createXiaoO() {
@@ -564,7 +659,7 @@
         const message = button.textContent.trim();
         setOpen(true);
         appendAssistantMessage(messages, "user", message);
-        appendAssistantMessage(messages, "assistant", assistantReply(message));
+        askXiaoO(messages, message);
       });
     });
     form.addEventListener("submit", (event) => {
@@ -573,7 +668,7 @@
       if (!message) return;
       input.value = "";
       appendAssistantMessage(messages, "user", message);
-      window.setTimeout(() => appendAssistantMessage(messages, "assistant", assistantReply(message)), 180);
+      askXiaoO(messages, message);
     });
   }
 
