@@ -1,324 +1,335 @@
 <!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>AI Omic Pricing | Malaysia SME Automation</title>
-    <meta
-      name="description"
-      content="AI Omic pricing for Malaysia SME workflow automation, workflow audit, AI automation, chatbot setup, presales and aftercare support."
-    />
-    <meta property="og:title" content="AI Omic Pricing | Malaysia SME Automation" />
-    <meta
-      property="og:description"
-      content="Make Work Flow Better. Workflow automation, AI flows, chatbot setup, and aftercare support for Malaysia SMEs."
-    />
-    <meta property="og:image" content="https://my-pricing-list.zeabur.app/assets/brand/ai-omic-logo.png" />
-    <link rel="icon" type="image/png" href="assets/brand/ai-omic-icon.png" />
-    <link rel="apple-touch-icon" href="assets/brand/apple-touch-icon.png" />
-    <link rel="stylesheet" href="assets/styles.css?v=20260524-client-results" />
-  </head>
-  <body>
-    <header class="site-header">
-      <a class="brand" href="index.html" aria-label="AI Omic home">
-        <img class="brand-logo" src="assets/brand/ai-omic-icon.png" alt="" />
-        <span>
+<html lang="en" data-theme="dark" data-motion="balanced">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AI Omic — AI Automation for Malaysia SMEs</title>
+  <meta name="description" content="AI Omic builds automation and AI workflows that turn manual work into clear operating flows for Malaysian SMEs." />
+  <link rel="icon" type="image/png" href="assets/brand/ai-omic-logo.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Hanken+Grotesk:wght@400;500;600;700&family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="bg-layer"></div>
+  <canvas id="net-canvas"></canvas>
+
+  <!-- ===================== HEADER ===================== -->
+  <header class="header" id="header">
+    <div class="wrap header-inner">
+      <a class="brand" href="#top" aria-label="AI Omic home">
+        <img class="brand-mark" src="assets/brand/ai-omic-logo.png" alt="AI Omic logo" />
+        <span class="brand-txt">
           <strong>AI Omic</strong>
-          <small>Make Work Flow Better</small>
+          <small data-i18n="brandSlogan">Make Work Flow Better</small>
         </span>
       </a>
-      <nav class="nav" aria-label="Main navigation">
+      <nav class="nav" aria-label="Main">
+        <a href="#flow" data-i18n="navFlow">How it works</a>
         <a href="#packages" data-i18n="navPackages">Packages</a>
-        <a href="#results" data-i18n="navTestimonials">Testimonials</a>
-        <a href="#sales" data-i18n="navSales">Sales Flow</a>
-        <a href="#support" data-i18n="navSupport">Aftercare</a>
+        <a href="#results" data-i18n="navResults">Results</a>
         <a href="blog.html" data-i18n="navBlog">Blog</a>
         <a href="playbook.html" data-i18n="navPlaybook">Playbook</a>
       </nav>
       <div class="header-actions">
-        <button class="lang-toggle" type="button" data-lang-toggle aria-label="Switch language">中文</button>
-        <a class="whatsapp-link" href="https://wa.me/601128229985" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp AI Omic at +60 11-2822 9985">
-          <img class="whatsapp-icon" src="assets/brand/whatsapp.svg" alt="" />
-          <span>WhatsApp</span>
+        <button class="lang-toggle" type="button" id="langToggle" aria-label="Switch language">中文</button>
+        <a class="wa" href="https://wa.me/601128229985" target="_blank" rel="noopener noreferrer">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2Zm0 18.13c-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.2 8.2 0 0 1-1.26-4.38c0-4.54 3.7-8.23 8.25-8.23a8.2 8.2 0 0 1 5.83 2.42 8.18 8.18 0 0 1 2.41 5.82c0 4.54-3.7 8.23-8.24 8.23Zm4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.13-.16.25-.64.81-.78.97-.14.17-.29.19-.54.06-.25-.12-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.01-.38.11-.51.11-.11.25-.29.37-.43.13-.14.17-.25.25-.41.08-.17.04-.31-.02-.43-.06-.12-.56-1.35-.77-1.85-.2-.48-.41-.42-.56-.42l-.48-.01c-.17 0-.43.06-.66.31-.23.25-.86.85-.86 2.07 0 1.22.89 2.4 1.01 2.56.12.17 1.75 2.67 4.23 3.74.59.26 1.05.41 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.14-1.18-.06-.1-.22-.16-.47-.28Z"/></svg>
+          <span data-i18n="waLabel">WhatsApp</span>
         </a>
-        <a class="button button-small" href="intake-form.html" data-i18n="navCta">Get Started</a>
+        <a class="btn btn-primary btn-sm" href="intake-form.html" data-i18n="navCta">Get started</a>
       </div>
-    </header>
+    </div>
+  </header>
 
-    <main>
-      <section class="hero">
-        <div class="hero-copy">
-          <p class="hero-meta" data-i18n="heroMeta">Valid from May 2026 · Malaysia · SME-friendly</p>
-          <p class="brand-slogan">
-            <span>Make Work Flow Better.</span>
-            <span>让工作流更顺。</span>
-          </p>
-          <h1 data-i18n="heroTitle">Automation services that turn manual work into clear operating flows.</h1>
-          <p class="hero-lede" data-i18n="heroLede">
-            Start with a free fit check, move into a paid workflow audit when the scope is unclear, then build the
-            automation with defined delivery, sign-off, and monthly support.
-          </p>
-          <div class="hero-actions">
-            <a class="button" href="intake-form.html" data-i18n="heroPrimary">Fill in requirements</a>
-            <a class="button button-secondary" href="#sales" data-i18n="heroSecondary">See the process</a>
+  <main id="top">
+    <!-- ===================== HERO ===================== -->
+    <section class="wrap hero">
+      <div class="hero-copy">
+        <p class="eyebrow reveal" data-i18n="heroEyebrow">AI &amp; Automation · Malaysia SME</p>
+        <h1 class="h1 reveal d1" data-i18n="heroTitle">Make work <span class="grad">flow better.</span></h1>
+        <p class="hero-lede reveal d2" data-i18n="heroLede">We turn repetitive manual work into clear, automated operating flows — from a free fit check to a built-and-supported AI workflow your whole team can rely on.</p>
+        <div class="hero-actions reveal d3">
+          <a class="btn btn-primary" href="intake-form.html" data-i18n="heroPrimary">Book a free fit check</a>
+          <a class="btn btn-ghost" href="#flow" data-i18n="heroSecondary">See how it works</a>
+        </div>
+        <div class="hero-trust reveal d4">
+          <div class="trust-stat"><strong class="grad" data-i18n="stat1n">1 day</strong><span data-i18n="stat1l">Reply on WhatsApp</span></div>
+          <div class="trust-divider"></div>
+          <div class="trust-stat"><strong class="grad" data-i18n="stat2n">14 days</strong><span data-i18n="stat2l">Post-launch support</span></div>
+          <div class="trust-divider"></div>
+          <div class="trust-stat"><strong class="grad" data-i18n="stat3n">n8n + AI</strong><span data-i18n="stat3l">Built on real tools</span></div>
+        </div>
+      </div>
+
+      <!-- 3D stage -->
+      <div class="stage reveal d2" id="stage" aria-hidden="true">
+        <div class="stage-3d" id="stage3d">
+          <div class="floor-glow"></div>
+
+          <svg class="flow-svg" viewBox="0 0 460 520" preserveAspectRatio="none">
+            <path d="M40 90 C 160 70, 150 220, 250 230" />
+            <path d="M250 230 C 360 240, 430 150, 440 130" />
+            <path d="M70 430 C 150 380, 200 300, 250 250" />
+            <path d="M250 250 C 330 320, 400 430, 420 470" />
+          </svg>
+
+          <!-- floating task cards -->
+          <div class="float-card fc-1">
+            <span class="fc-ico" style="color:#25d366">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2Zm5.85 14.07c-.21.58-1.2 1.11-1.68 1.18-.43.06-.97.09-1.56-.1-.36-.11-.82-.26-1.41-.52-2.48-1.07-4.11-3.57-4.23-3.74-.12-.16-1.01-1.34-1.01-2.56 0-1.22.63-1.82.86-2.07.23-.25.49-.31.66-.31l.48.01c.15 0 .36-.06.56.42.21.5.71 1.73.77 1.85.06.12.1.26.02.43-.08.16-.12.27-.25.41-.12.14-.26.32-.37.43-.12.13-.25.26-.11.51.15.25.64 1.06 1.38 1.72.94.84 1.74 1.11 1.99 1.23.25.13.4.11.54-.06.14-.16.62-.72.78-.97.17-.25.33-.21.56-.13.22.09 1.44.69 1.69.81.25.12.41.18.47.28.07.11.07.6-.14 1.18Z"/></svg>
+            </span>
+            <span><b data-i18n="fc1t">New enquiry</b><small data-i18n="fc1s">Captured from WhatsApp</small></span>
+          </div>
+
+          <div class="float-card fc-2">
+            <span class="fc-ico" style="color:var(--a2)">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M3 15h18M9 3v18M15 3v18"/></svg>
+            </span>
+            <span><b data-i18n="fc2t">Logged to Sheet</b><small data-i18n="fc2s">Status · owner</small></span>
+          </div>
+
+          <div class="float-card fc-3">
+            <span class="fc-ico" style="color:var(--a1)">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3l1.9 4.6L18.5 9l-4.6 1.9L12 15.5l-1.9-4.6L5.5 9l4.6-1.4L12 3Z"/><circle cx="18" cy="17" r="2.5"/></svg>
+            </span>
+            <span><b data-i18n="fc3t">AI drafts a reply</b><small data-i18n="fc3s">Classified &amp; routed</small></span>
+          </div>
+
+          <div class="float-card fc-4">
+            <span class="fc-ico" style="color:var(--a1)">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6 9 17l-5-5"/></svg>
+            </span>
+            <span><b data-i18n="fc4t">Owner notified</b></span>
+            <span class="pill pill-ok" data-i18n="fc4p">Done</span>
+          </div>
+
+          <!-- Xiao-O mascot -->
+          <div class="bot" id="bot">
+            <div class="bot-halo"></div>
+            <div class="antenna"></div>
+            <div class="ear ear-l"></div>
+            <div class="ear ear-r"></div>
+            <div class="bot-head">
+              <div class="visor">
+                <span class="eye"></span>
+                <span class="eye"></span>
+                <span class="visor-scan"></span>
+              </div>
+            </div>
+            <div class="arm arm-l"></div>
+            <div class="arm arm-r"></div>
+            <div class="bot-body">
+              <div class="bot-core"></div>
+            </div>
           </div>
         </div>
-        <div class="hero-panel" aria-label="Service journey">
-          <ol class="journey-list">
-            <li>
-              <span>01</span>
-              <strong data-i18n="journey1Title">Intake form</strong>
-              <p data-i18n="journey1Text">Client explains pain point, current tools, volume, budget, and timeline.</p>
-            </li>
-            <li>
-              <span>02</span>
-              <strong data-i18n="journey2Title">Free fit check</strong>
-              <p data-i18n="journey2Text">15-30 minutes to confirm whether automation can save real time or reduce leakage.</p>
-            </li>
-            <li>
-              <span>03</span>
-              <strong data-i18n="journey3Title">Audit or quote</strong>
-              <p data-i18n="journey3Text">Unclear scope starts with RM299-RM499 audit; clear scope goes straight to quote.</p>
-            </li>
-            <li>
-              <span>04</span>
-              <strong data-i18n="journey4Title">Delivery and support</strong>
-              <p data-i18n="journey4Text">Build, test, hand over, 14-day WhatsApp support, then optional monthly maintenance.</p>
-            </li>
-          </ol>
-        </div>
-      </section>
+      </div>
+    </section>
 
-      <section id="packages" class="section">
-        <div class="section-heading">
-          <p class="section-label" data-i18n="packagesLabel">Service packages</p>
-          <h2 data-i18n="packagesTitle">Four entry points, from diagnosis to AI workflow support.</h2>
-          <p data-i18n="packagesIntro">
-            Every package is scoped around outcomes: saving admin hours, reducing missed replies, preventing order leaks,
-            and making work status visible to the owner.
-          </p>
+    <!-- ===================== TOOLS ===================== -->
+    <section class="tools">
+      <div class="wrap">
+        <p class="tools-head reveal" data-i18n="toolsHead">Built on the tools your business already trusts</p>
+        <div class="tools-row reveal d1">
+          <span class="tool-chip"><span class="dot"></span>n8n</span>
+          <span class="tool-chip"><span class="dot"></span>WhatsApp</span>
+          <span class="tool-chip"><span class="dot"></span>Google Sheets</span>
+          <span class="tool-chip"><span class="dot"></span>OpenAI</span>
+          <span class="tool-chip"><span class="dot"></span>Claude</span>
+          <span class="tool-chip"><span class="dot"></span>Telegram</span>
+          <span class="tool-chip"><span class="dot"></span>Excel</span>
         </div>
-        <div class="package-grid">
-          <article class="package-card">
-            <div class="package-topline">
-              <span>01</span>
-              <small data-i18n="auditTag">For unclear needs</small>
-            </div>
-            <h3 data-i18n="auditTitle">Workflow Audit</h3>
-            <p class="price">RM 299-499</p>
-            <p data-i18n="auditDesc">A paid discovery session with a simple process map, recommended automation path, budget range, and implementation plan.</p>
-          </article>
-          <article class="package-card">
-            <div class="package-topline">
-              <span>02</span>
-              <small data-i18n="basicTag">Starter</small>
-            </div>
-            <h3 data-i18n="basicTitle">Basic Automation</h3>
-            <p class="price">RM 500-1,200</p>
-            <p class="support-price" data-i18n="basicSupport">Monthly support RM 300-500</p>
-            <p data-i18n="basicDesc">Excel, Google Sheets, forms, admin tracking, notifications, and simple reporting workflows.</p>
-          </article>
-          <article class="package-card package-card-featured">
-            <div class="package-topline">
-              <span>03</span>
-              <small data-i18n="flowTag">Most popular</small>
-            </div>
-            <h3 data-i18n="flowTitle">AI Automation Flow</h3>
-            <p class="price">RM 1,500-3,500</p>
-            <p class="support-price" data-i18n="flowSupport">Monthly support RM 500-800</p>
-            <p data-i18n="flowDesc">n8n workflows, AI classification, AI replies, document extraction, routing, alerts, and approval flows.</p>
-          </article>
-          <article class="package-card">
-            <div class="package-topline">
-              <span>04</span>
-              <small data-i18n="botTag">WhatsApp / Web / Telegram</small>
-            </div>
-            <h3 data-i18n="botTitle">AI Chatbot</h3>
-            <p class="price">RM 2,000-4,500</p>
-            <p class="support-price" data-i18n="botSupport">Monthly support RM 600-1,000</p>
-            <p data-i18n="botDesc">Customer support chatbot, FAQ bot, document Q&A, lead capture, and handoff to human teams.</p>
-          </article>
-        </div>
-      </section>
+      </div>
+    </section>
 
-      <section id="results" class="section results-section">
-        <div class="section-heading">
-          <p class="section-label" data-i18n="resultsLabel">Client results</p>
-          <h2 data-i18n="resultsTitle">Real workflow wins from AI automation.</h2>
-          <p data-i18n="resultsIntro">
-            The best AI projects are measured by time saved, fewer manual checks, and better decisions for the team.
-          </p>
+    <!-- ===================== FLOW ===================== -->
+    <section class="section" id="flow">
+      <div class="wrap">
+        <div class="section-head center reveal">
+          <p class="eyebrow" style="justify-content:center" data-i18n="flowEyebrow">The journey</p>
+          <h2 data-i18n="flowTitle">From manual mess to a working flow</h2>
+          <p data-i18n="flowIntro">A clear path that protects everyone's time: qualify the fit first, scope it properly, then build, test and support.</p>
+        </div>
+        <div class="flow-grid">
+          <article class="flow-step reveal d1">
+            <div class="flow-num">01</div>
+            <div class="connector"></div>
+            <h3 data-i18n="flow1t">Intake form</h3>
+            <p data-i18n="flow1d">You explain the pain point, current tools, volume, budget and timeline.</p>
+          </article>
+          <article class="flow-step reveal d2">
+            <div class="flow-num">02</div>
+            <div class="connector"></div>
+            <h3 data-i18n="flow2t">Free fit check</h3>
+            <p data-i18n="flow2d">15–30 minutes to confirm automation can save real time or stop leakage.</p>
+          </article>
+          <article class="flow-step reveal d3">
+            <div class="flow-num">03</div>
+            <div class="connector"></div>
+            <h3 data-i18n="flow3t">Audit or quote</h3>
+            <p data-i18n="flow3d">Unclear scope starts with an RM299–499 audit; clear scope goes straight to a quote.</p>
+          </article>
+          <article class="flow-step reveal d4">
+            <div class="flow-num">04</div>
+            <h3 data-i18n="flow4t">Build &amp; support</h3>
+            <p data-i18n="flow4d">Build, test, hand over, 14-day WhatsApp support, then optional monthly care.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== PACKAGES ===================== -->
+    <section class="section" id="packages">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <p class="eyebrow" data-i18n="pkgEyebrow">Service packages</p>
+          <h2 data-i18n="pkgTitle">Four entry points, from diagnosis to AI workflows</h2>
+          <p data-i18n="pkgIntro">Every package is scoped around outcomes — saving admin hours, reducing missed replies, preventing order leaks, and making status visible to the owner.</p>
+        </div>
+        <div class="pkg-grid">
+          <article class="pkg reveal d1">
+            <div class="pkg-glint"></div>
+            <div class="pkg-top"><span class="pkg-num">01</span><span class="pkg-tag" data-i18n="p1tag">Unclear needs</span></div>
+            <h3 data-i18n="p1t">Workflow Audit</h3>
+            <p class="price grad">RM 299–499</p>
+            <p class="support">&nbsp;</p>
+            <p class="desc" data-i18n="p1d">A paid discovery session with a simple process map, recommended automation path, budget range and implementation plan.</p>
+            <a class="pkg-cta" href="intake-form.html" data-i18n="pkgCta">Start here <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          </article>
+          <article class="pkg reveal d2">
+            <div class="pkg-glint"></div>
+            <div class="pkg-top"><span class="pkg-num">02</span><span class="pkg-tag" data-i18n="p2tag">Starter</span></div>
+            <h3 data-i18n="p2t">Basic Automation</h3>
+            <p class="price grad">RM 500–1,200</p>
+            <p class="support" data-i18n="p2s">Monthly support RM 300–500</p>
+            <p class="desc" data-i18n="p2d">Excel, Google Sheets, forms, admin tracking, notifications and simple reporting workflows.</p>
+            <a class="pkg-cta" href="intake-form.html" data-i18n="pkgCta2">Start here <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          </article>
+          <article class="pkg pkg-featured reveal d3">
+            <div class="pkg-glint"></div>
+            <div class="pkg-top"><span class="pkg-num">03</span><span class="pkg-tag" data-i18n="p3tag">Most popular</span></div>
+            <h3 data-i18n="p3t">AI Automation Flow</h3>
+            <p class="price">RM 1,500–3,500</p>
+            <p class="support" data-i18n="p3s">Monthly support RM 500–800</p>
+            <p class="desc" data-i18n="p3d">n8n workflows, AI classification, AI replies, document extraction, routing, alerts and approval flows.</p>
+            <a class="pkg-cta" href="intake-form.html" data-i18n="pkgCta3">Start here <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          </article>
+          <article class="pkg reveal d4">
+            <div class="pkg-glint"></div>
+            <div class="pkg-top"><span class="pkg-num">04</span><span class="pkg-tag" data-i18n="p4tag">Chat</span></div>
+            <h3 data-i18n="p4t">AI Chatbot</h3>
+            <p class="price grad">RM 2,000–4,500</p>
+            <p class="support" data-i18n="p4s">Monthly support RM 600–1,000</p>
+            <p class="desc" data-i18n="p4d">Customer support chatbot, FAQ bot, document Q&amp;A, lead capture and handoff to human teams.</p>
+            <a class="pkg-cta" href="intake-form.html" data-i18n="pkgCta4">Start here <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== RESULTS ===================== -->
+    <section class="section" id="results">
+      <div class="wrap">
+        <div class="section-head center reveal">
+          <p class="eyebrow" style="justify-content:center" data-i18n="resEyebrow">Client results</p>
+          <h2 data-i18n="resTitle">Measured in hours saved, not hype</h2>
+          <p data-i18n="resIntro">The best AI projects are measured by time saved, fewer manual checks and better decisions for the team.</p>
         </div>
         <div class="results-grid">
-          <article class="result-card">
-            <div class="result-topline">
-              <span>01</span>
-              <small data-i18n="result1Role">Sales Leader · Incentive Automation</small>
+          <article class="result reveal d1">
+            <div class="result-top">
+              <span class="result-av">SL</span>
+              <span class="result-role" data-i18n="r1role">Sales Leader · Incentive Automation</span>
             </div>
-            <blockquote data-i18n="result1Quote">
-              “Calculating monthly sales incentives used to be my least favorite task—hours spent building formulas and double-checking data. This AI system changed everything. It does the heavy lifting in seconds and gets the math right every time. It's a massive timesaver that any sales leader needs in their toolkit!”
-            </blockquote>
-            <div class="result-tags" aria-label="Result tags">
-              <span data-i18n="result1Tag1">Sales calculation</span>
-              <span data-i18n="result1Tag2">Formula automation</span>
-              <span data-i18n="result1Tag3">Time saving</span>
-              <span data-i18n="result1Tag4">Accuracy</span>
-            </div>
+            <div class="quote-mark">&ldquo;</div>
+            <blockquote data-i18n="r1q">Calculating monthly sales incentives used to be my least favorite task. This AI system does the heavy lifting in seconds and gets the math right every time — a massive timesaver any sales leader needs.</blockquote>
+            <div class="result-tags"><span>Sales calc</span><span>Formulas</span><span>Time saving</span><span>Accuracy</span></div>
           </article>
-          <article class="result-card result-card-featured">
-            <div class="result-topline">
-              <span>02</span>
-              <small data-i18n="result2Role">Head of Department · Research & Strategy Support</small>
+          <article class="result result-featured reveal d2">
+            <div class="result-top">
+              <span class="result-av">HD</span>
+              <span class="result-role" data-i18n="r2role">Head of Dept · Research &amp; Strategy</span>
             </div>
-            <blockquote data-i18n="result2Quote">
-              “This AI system has completely redefined how I manage my role as a HOD. On the strategic side, it instantly pulls and synthesizes market research that used to take days to compile. It saves me massive amounts of time, allowing me to focus on data-driven coaching and driving revenue.”
-            </blockquote>
-            <div class="result-tags" aria-label="Result tags">
-              <span data-i18n="result2Tag1">Market research</span>
-              <span data-i18n="result2Tag2">AI synthesis</span>
-              <span data-i18n="result2Tag3">Leadership support</span>
-              <span data-i18n="result2Tag4">Revenue focus</span>
+            <div class="quote-mark">&ldquo;</div>
+            <blockquote data-i18n="r2q">It instantly pulls and synthesizes market research that used to take days to compile. It saves me massive amounts of time, letting me focus on data-driven coaching and driving revenue.</blockquote>
+            <div class="result-tags"><span>Research</span><span>AI synthesis</span><span>Leadership</span><span>Revenue</span></div>
+          </article>
+          <article class="result reveal d3">
+            <div class="result-top">
+              <span class="result-av">PM</span>
+              <span class="result-role" data-i18n="r3role">Product Manager · Pharma</span>
             </div>
+            <div class="quote-mark">&ldquo;</div>
+            <blockquote data-i18n="r3q">Using AI to prepare my slides transformed my workflow. I spent less time wrestling with layouts and more on strategy — a polished, professional deck that impressed the team.</blockquote>
+            <div class="result-tags"><span>Slides</span><span>Brand plan</span><span>Strategy</span><span>Quality</span></div>
           </article>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <section id="sales" class="section section-split">
-        <div>
-          <p class="section-label" data-i18n="salesLabel">Presales process</p>
-          <h2 data-i18n="salesTitle">How a lead becomes a scoped project.</h2>
-          <p data-i18n="salesIntro">
-            The first conversation is not a free solution-design session. It qualifies fit, then sends unclear work into
-            a paid audit so time is protected on both sides.
-          </p>
-        </div>
-        <div class="process-steps">
-          <article>
-            <span>1</span>
-            <h3 data-i18n="salesStep1Title">Reply within 1 business day</h3>
-            <p data-i18n="salesStep1Text">Acknowledge the form and ask only for missing items needed to judge fit.</p>
-          </article>
-          <article>
-            <span>2</span>
-            <h3 data-i18n="salesStep2Title">15-30 minute free fit check</h3>
-            <p data-i18n="salesStep2Text">Confirm pain point, tools, volume, budget, and timeline.</p>
-          </article>
-          <article>
-            <span>3</span>
-            <h3 data-i18n="salesStep3Title">Audit if unclear, quote if clear</h3>
-            <p data-i18n="salesStep3Text">Audit delivers a process map and recommendation. Clear scopes receive a quote with payment terms.</p>
-          </article>
-          <article>
-            <span>4</span>
-            <h3 data-i18n="salesStep4Title">50% deposit, 50% before handover</h3>
-            <p data-i18n="salesStep4Text">Every quote states scope, deliverables, exclusions, revisions, timeline, and platform costs.</p>
-          </article>
-        </div>
-      </section>
-
-      <section class="section checklist-section">
-        <div class="section-heading">
-          <p class="section-label" data-i18n="quoteLabel">Quote checklist</p>
-          <h2 data-i18n="quoteTitle">Every proposal must make scope visible.</h2>
-        </div>
-        <div class="checklist-grid">
-          <div class="checklist-card">
-            <h3 data-i18n="includedTitle">Included in price</h3>
-            <ul>
-              <li data-i18n="included1">Flow design and build</li>
-              <li data-i18n="included2">Testing and bug fixing</li>
-              <li data-i18n="included3">AI prompt tuning</li>
-              <li data-i18n="included4">Basic training and handover doc</li>
-              <li data-i18n="included5">1 revision after delivery</li>
-              <li data-i18n="included6">WhatsApp support for 14 days</li>
-            </ul>
-          </div>
-          <div class="checklist-card">
-            <h3 data-i18n="excludedTitle">Not included</h3>
-            <ul>
-              <li data-i18n="excluded1">n8n Cloud or hosting fees</li>
-              <li data-i18n="excluded2">OpenAI / Claude API costs</li>
-              <li data-i18n="excluded3">WhatsApp Business API fee</li>
-              <li data-i18n="excluded4">Google Workspace, domains, and subscriptions</li>
-              <li data-i18n="excluded5">Extra revisions beyond scope</li>
-              <li data-i18n="excluded6">New features after sign-off</li>
-            </ul>
-          </div>
-          <div class="checklist-card">
-            <h3 data-i18n="quoteMustTitle">Must be written in every quote</h3>
-            <ul>
-              <li data-i18n="quoteMust1">Project scope and expected outcome</li>
-              <li data-i18n="quoteMust2">Deliverables and handover items</li>
-              <li data-i18n="quoteMust3">Revision limit and support window</li>
-              <li data-i18n="quoteMust4">Estimated delivery timeline</li>
-              <li data-i18n="quoteMust5">50% deposit + 50% before handover</li>
-              <li data-i18n="quoteMust6">Third-party costs paid directly by client</li>
-            </ul>
+    <!-- ===================== PROCESS + SCENARIOS ===================== -->
+    <section class="section" id="process">
+      <div class="wrap split">
+        <div class="reveal">
+          <p class="eyebrow" data-i18n="procEyebrow">Presales process</p>
+          <h2 style="font-size:clamp(1.8rem,3.4vw,2.7rem);line-height:1.06;margin-bottom:16px" data-i18n="procTitle">How a lead becomes a scoped project</h2>
+          <p style="color:var(--muted);margin:0 0 28px" data-i18n="procIntro">The first conversation qualifies fit, then sends unclear work into a paid audit — so time is protected on both sides.</p>
+          <div class="steps">
+            <div class="step"><div class="step-num">1</div><h3 data-i18n="ps1t">Reply within 1 business day</h3><p data-i18n="ps1d">We acknowledge the form and ask only for what's missing to judge fit.</p></div>
+            <div class="step"><div class="step-num">2</div><h3 data-i18n="ps2t">15–30 min free fit check</h3><p data-i18n="ps2d">Confirm pain point, tools, volume, budget and timeline.</p></div>
+            <div class="step"><div class="step-num">3</div><h3 data-i18n="ps3t">Audit if unclear, quote if clear</h3><p data-i18n="ps3d">Audit delivers a process map; clear scopes receive a quote with terms.</p></div>
+            <div class="step"><div class="step-num">4</div><h3 data-i18n="ps4t">50% deposit, 50% before handover</h3><p data-i18n="ps4d">Every quote states scope, deliverables, exclusions, revisions and timeline.</p></div>
           </div>
         </div>
-      </section>
-
-      <section id="support" class="section section-split support-band">
-        <div>
-          <p class="section-label" data-i18n="supportLabel">Delivery and aftercare</p>
-          <h2 data-i18n="supportTitle">Support stays useful because the boundaries are clear.</h2>
-          <p data-i18n="supportIntro">
-            The first 14 days are for stabilising the delivered workflow. Monthly support begins after that and focuses on
-            maintenance, monitoring, small adjustments, and light prompt tuning.
-          </p>
-          <a class="button button-secondary" href="playbook.html" data-i18n="supportCta">Open templates</a>
+        <div class="scenarios reveal d2">
+          <p class="section-sub" data-i18n="scenSub">SME scenarios we automate</p>
+          <div class="scen-grid">
+            <article class="scen">
+              <h3><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="var(--a1)" stroke-width="2"><path d="M3 11l18-8-8 18-2-8-8-2Z"/></svg></span><span data-i18n="sc1t">Restaurant / retail</span></h3>
+              <p data-i18n="sc1d">WhatsApp enquiries captured into Google Sheets with status, owner and follow-up reminder.</p>
+            </article>
+            <article class="scen">
+              <h3><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="var(--a2)" stroke-width="2"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/><path d="M3 6h18M16 10a4 4 0 0 1-8 0"/></svg></span><span data-i18n="sc2t">E-commerce</span></h3>
+              <p data-i18n="sc2d">Orders, customer messages, inventory alerts and fulfilment updates in one workflow.</p>
+            </article>
+            <article class="scen">
+              <h3><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="var(--a1)" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8Z"/><path d="M14 2v6h6M9 13h6M9 17h4"/></svg></span><span data-i18n="sc3t">Professional services</span></h3>
+              <p data-i18n="sc3d">Documents organised, clients reminded automatically, and a chatbot answers FAQs.</p>
+            </article>
+          </div>
         </div>
-        <div class="delivery-card">
-          <h3 data-i18n="deliveryTitle">Delivery flow</h3>
-          <ol>
-            <li data-i18n="delivery1">Kickoff</li>
-            <li data-i18n="delivery2">Account and access checklist</li>
-            <li data-i18n="delivery3">Workflow confirmation</li>
-            <li data-i18n="delivery4">Build and internal testing</li>
-            <li data-i18n="delivery5">Client acceptance test</li>
-            <li data-i18n="delivery6">Training and handover doc</li>
-            <li data-i18n="delivery7">Sign-off and support start date</li>
-          </ol>
-        </div>
-      </section>
+      </div>
+    </section>
 
-      <section class="section">
-        <div class="section-heading">
-          <p class="section-label" data-i18n="examplesLabel">SME scenarios</p>
-          <h2 data-i18n="examplesTitle">Use these as sales examples during discovery.</h2>
+    <!-- ===================== CTA ===================== -->
+    <section class="section" id="contact" style="padding-top:20px">
+      <div class="wrap">
+        <div class="cta reveal">
+          <p class="eyebrow" style="justify-content:center;color:rgba(255,255,255,.7)" data-i18n="ctaEyebrow">Let's talk</p>
+          <h2 data-i18n="ctaTitle">Ready to turn a manual process into a working flow?</h2>
+          <p data-i18n="ctaText">Tell us what's taking too much time. We'll reply on WhatsApp within 1 business day.</p>
+          <div class="hero-actions" style="justify-content:center">
+            <a class="btn btn-primary" href="https://wa.me/601128229985" target="_blank" rel="noopener noreferrer" data-i18n="ctaPrimary">Message us on WhatsApp</a>
+            <a class="btn btn-ghost" href="#flow" data-i18n="ctaSecondary">Review the process</a>
+          </div>
         </div>
-        <div class="scenario-grid">
-          <article>
-            <h3 data-i18n="scenario1Title">Restaurant / retail</h3>
-            <p data-i18n="scenario1Text">WhatsApp enquiries are captured into Google Sheets with status, owner, and follow-up reminder.</p>
-          </article>
-          <article>
-            <h3 data-i18n="scenario2Title">E-commerce</h3>
-            <p data-i18n="scenario2Text">Orders, customer service messages, inventory alerts, and fulfilment updates move through one workflow.</p>
-          </article>
-          <article>
-            <h3 data-i18n="scenario3Title">Professional services</h3>
-            <p data-i18n="scenario3Text">Documents are organised, clients receive follow-up reminders, and a chatbot answers common questions.</p>
-          </article>
-        </div>
-      </section>
+      </div>
+    </section>
+  </main>
 
-      <section class="cta-section">
-        <h2 data-i18n="finalTitle">Ready to turn a manual process into a working flow?</h2>
-        <p data-i18n="finalText">Tell us what is taking too much time. We will reply via WhatsApp within 1 business day.</p>
-        <a class="button" href="intake-form.html" data-i18n="finalCta">Start with the intake form</a>
-      </section>
-    </main>
-
-    <footer class="footer">
-      <a class="whatsapp-link footer-whatsapp" href="https://wa.me/601128229985" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp AI Omic at +60 11-2822 9985">
-        <img class="whatsapp-icon" src="assets/brand/whatsapp.svg" alt="" />
-        <span>WhatsApp</span>
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="footer">
+    <div class="wrap footer-inner">
+      <a class="brand" href="#top">
+        <img class="brand-mark" src="assets/brand/ai-omic-logo.png" alt="" />
+        <span class="brand-txt"><strong>AI Omic</strong><small data-i18n="brandSlogan2">Make Work Flow Better · 让工作流更顺</small></span>
       </a>
-      <p data-i18n="footerText">Platform costs are paid directly by the client. Account management add-on: RM100/hr or fixed monthly fee by arrangement.</p>
-      <p>Ad-hoc rate: RM 100/hr</p>
-    </footer>
+      <p class="footer-meta" data-i18n="footerMeta">Platform costs (n8n, AI APIs, WhatsApp Business) are paid directly by the client. Ad-hoc rate RM 100/hr. <a href="https://wa.me/601128229985" target="_blank" rel="noopener">WhatsApp +60 11-2822 9985</a></p>
+    </div>
+  </footer>
 
-    <script src="assets/app.js?v=20260524-client-results"></script>
-  </body>
+  <script src="app.js"></script>
+</body>
 </html>

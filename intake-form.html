@@ -1,213 +1,169 @@
 <!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Workflow Automation Intake Form</title>
-    <meta name="description" content="Tell us your manual process so we can suggest the right automation path." />
-    <meta property="og:title" content="AI Omic Intake Form" />
-    <meta
-      property="og:description"
-      content="Tell AI Omic about your workflow so we can recommend the right automation path."
-    />
-    <meta property="og:image" content="https://my-pricing-list.zeabur.app/assets/brand/ai-omic-logo.png" />
-    <link rel="icon" type="image/png" href="assets/brand/ai-omic-icon.png" />
-    <link rel="apple-touch-icon" href="assets/brand/apple-touch-icon.png" />
-    <link rel="stylesheet" href="assets/styles.css?v=20260524-client-results" />
-  </head>
-  <body>
-    <header class="site-header">
-      <a class="brand" href="index.html" aria-label="Back to AI Omic pricing">
-        <img class="brand-logo" src="assets/brand/ai-omic-icon.png" alt="" />
-        <span>
-          <strong>AI Omic</strong>
-          <small>Make Work Flow Better</small>
-        </span>
+<html lang="en" data-theme="dark" data-motion="balanced">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Intake Form — AI Omic</title>
+  <meta name="description" content="Tell AI Omic what's taking too much time. We'll reply on WhatsApp within 1 business day." />
+  <link rel="icon" type="image/png" href="assets/brand/ai-omic-logo.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Hanken+Grotesk:wght@400;500;600;700&family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="pages.css" />
+</head>
+<body>
+  <div class="bg-layer"></div>
+  <canvas id="net-canvas"></canvas>
+
+  <header class="header" id="header">
+    <div class="wrap header-inner">
+      <a class="brand" href="index.html" aria-label="AI Omic home">
+        <img class="brand-mark" src="assets/brand/ai-omic-logo.png" alt="AI Omic logo" />
+        <span class="brand-txt"><strong>AI Omic</strong><small data-i18n="brandSlogan">Make Work Flow Better</small></span>
       </a>
-      <nav class="nav" aria-label="Main navigation">
+      <nav class="nav" aria-label="Main">
         <a href="index.html#packages" data-i18n="navPackages">Packages</a>
-        <a href="index.html#results" data-i18n="navTestimonials">Testimonials</a>
-        <a href="index.html#sales" data-i18n="navSales">Sales Flow</a>
+        <a href="index.html#results" data-i18n="navResults">Results</a>
         <a href="blog.html" data-i18n="navBlog">Blog</a>
         <a href="playbook.html" data-i18n="navPlaybook">Playbook</a>
       </nav>
       <div class="header-actions">
-        <button class="lang-toggle" type="button" data-lang-toggle aria-label="Switch language">中文</button>
-        <a class="whatsapp-link" href="https://wa.me/601128229985" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp AI Omic at +60 11-2822 9985">
-          <img class="whatsapp-icon" src="assets/brand/whatsapp.svg" alt="" />
-          <span>WhatsApp</span>
+        <button class="lang-toggle" type="button" id="langToggle" aria-label="Switch language">中文</button>
+        <a class="wa" href="https://wa.me/601128229985" target="_blank" rel="noopener noreferrer">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2Zm0 18.13c-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.2 8.2 0 0 1-1.26-4.38c0-4.54 3.7-8.23 8.25-8.23a8.2 8.2 0 0 1 5.83 2.42 8.18 8.18 0 0 1 2.41 5.82c0 4.54-3.7 8.23-8.24 8.23Zm4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.13-.16.25-.64.81-.78.97-.14.17-.29.19-.54.06-.25-.12-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.01-.38.11-.51.11-.11.25-.29.37-.43.13-.14.17-.25.25-.41.08-.17.04-.31-.02-.43-.06-.12-.56-1.35-.77-1.85-.2-.48-.41-.42-.56-.42l-.48-.01c-.17 0-.43.06-.66.31-.23.25-.86.85-.86 2.07 0 1.22.89 2.4 1.01 2.56.12.17 1.75 2.67 4.23 3.74.59.26 1.05.41 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.14-1.18-.06-.1-.22-.16-.47-.28Z"/></svg>
+          <span data-i18n="waLabel">WhatsApp</span>
         </a>
+        <a class="btn btn-primary btn-sm" href="intake-form.html" data-i18n="navCta">Get started</a>
       </div>
-    </header>
+    </div>
+  </header>
 
-    <main>
-      <section class="form-hero">
-        <div>
-          <p class="hero-meta" data-i18n="formMeta">Takes less than 3 minutes</p>
-          <p class="brand-slogan">
-            <span>Make Work Flow Better.</span>
-            <span>让工作流更顺。</span>
-          </p>
-          <h1 data-i18n="formTitle">Workflow Automation Intake Form</h1>
-          <p data-i18n="formIntro">Tell us your current manual process so we can suggest audit, automation, or chatbot support.</p>
+  <main>
+    <section class="wrap page-hero">
+      <div class="reveal">
+        <p class="crumb"><a href="index.html" data-i18n="crumbHome">Home</a><span>/</span><span data-i18n="crumbForm">Intake form</span></p>
+        <h1 data-i18n="formTitle">Tell us what's taking <span class="grad">too much time.</span></h1>
+        <p class="lede" data-i18n="formLede">Under 3 minutes. We'll tell you whether it's a fit for an audit, automation or chatbot — and reply on WhatsApp within 1 business day.</p>
+      </div>
+      <div class="motif reveal d2" aria-hidden="true">
+        <div class="motif-card">
+          <div class="motif-orb"></div>
+          <div class="motif-row"><span class="motif-dot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v6M12 2 9 5M12 2l3 3"/><rect x="4" y="8" width="16" height="12" rx="2"/></svg></span><span><b data-i18n="mf1t">You share the pain</b><small data-i18n="mf1s">Tools · volume · budget</small></span></div>
+          <div class="motif-row"><span class="motif-dot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3l1.9 4.6L18.5 9l-4.6 1.9L12 15.5l-1.9-4.6L5.5 9l4.6-1.4L12 3Z"/></svg></span><span><b data-i18n="mf2t">We judge the fit</b><small data-i18n="mf2s">Audit, automation or bot</small></span></div>
+          <div class="motif-row"><span class="motif-dot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6 9 17l-5-5"/></svg></span><span><b data-i18n="mf3t">Reply in 1 day</b><small data-i18n="mf3s">On WhatsApp</small></span><span class="tick"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" width="16" height="16"><path d="M20 6 9 17l-5-5"/></svg></span></div>
         </div>
-        <aside class="response-card">
-          <strong data-i18n="responseTitle">Response promise</strong>
-          <p data-i18n="responseText">We will review your details and reply via WhatsApp within 1 business day.</p>
-        </aside>
-      </section>
+      </div>
+    </section>
 
-      <form class="intake-form" data-intake-form>
-        <section class="form-section">
-          <div class="form-section-heading">
-            <span>01</span>
-            <h2 data-i18n="clientInfo">Client information</h2>
-          </div>
-          <div class="field-grid">
-            <label>
-              <span data-i18n="fullName">Full name *</span>
-              <input name="Full name" required autocomplete="name" />
-            </label>
-            <label>
-              <span data-i18n="company">Company name</span>
-              <input name="Company name" autocomplete="organization" />
-            </label>
-            <label>
-              <span data-i18n="phone">WhatsApp / phone *</span>
-              <input name="WhatsApp / phone" required autocomplete="tel" />
-            </label>
-            <label>
-              <span data-i18n="email">Email</span>
-              <input name="Email" type="email" autocomplete="email" />
-            </label>
-            <label class="field-wide">
-              <span data-i18n="industry">Industry / business type</span>
-              <input name="Industry / business type" placeholder="Retail, F&B, accounting, education..." />
-            </label>
-          </div>
-        </section>
-
-        <section class="form-section">
-          <div class="form-section-heading">
-            <span>02</span>
-            <h2 data-i18n="manualWork">Manual work and current tools</h2>
-          </div>
-          <label>
-            <span data-i18n="tooMuchTime">What work is currently taking too much time?</span>
-            <textarea name="Manual work" rows="4"></textarea>
-          </label>
-          <fieldset>
-            <legend data-i18n="toolsLegend">Which platforms / tools do you currently use?</legend>
-            <div class="checkbox-grid">
-              <label><input type="checkbox" name="Tools" value="WhatsApp Business" /> WhatsApp Business</label>
-              <label><input type="checkbox" name="Tools" value="Google Sheets / Drive" /> Google Sheets / Drive</label>
-              <label><input type="checkbox" name="Tools" value="Shopify / WooCommerce" /> Shopify / WooCommerce</label>
-              <label><input type="checkbox" name="Tools" value="Telegram" /> Telegram</label>
-              <label><input type="checkbox" name="Tools" value="CRM" /> CRM</label>
-              <label><input type="checkbox" name="Tools" value="Other" /> Other</label>
-            </div>
-          </fieldset>
-          <label>
-            <span data-i18n="volume">Approximate volume per day / week</span>
-            <input name="Approximate volume" placeholder="Example: 50 WhatsApp enquiries per day" />
-          </label>
-        </section>
-
-        <section class="form-section">
-          <div class="form-section-heading">
-            <span>03</span>
-            <h2 data-i18n="desiredOutcome">Desired outcome</h2>
-          </div>
-          <div class="field-grid">
-            <label class="field-wide">
-              <span data-i18n="mainProblem">What is the main problem you want to solve?</span>
-              <textarea name="Main problem" rows="3"></textarea>
-            </label>
-            <label class="field-wide">
-              <span data-i18n="successLooks">What does success look like to you?</span>
-              <textarea name="Success looks like" rows="3"></textarea>
-            </label>
-            <label>
-              <span data-i18n="timeline">Timeline</span>
-              <select name="Timeline">
-                <option value="ASAP within 2 weeks">ASAP within 2 weeks</option>
-                <option value="1 month">1 month</option>
-                <option value="1-3 months">1-3 months</option>
-                <option value="Flexible">Flexible</option>
-              </select>
-            </label>
-          </div>
-        </section>
-
-        <section class="form-section">
-          <div class="form-section-heading">
-            <span>04</span>
-            <h2 data-i18n="serviceFit">Service fit</h2>
-          </div>
-          <fieldset>
-            <legend data-i18n="serviceDirection">Which service direction fits your situation? *</legend>
-            <div class="radio-stack">
-              <label><input required type="radio" name="Service direction" value="Workflow Audit RM299-499" /> Workflow Audit / not sure yet (RM299-499)</label>
-              <label><input type="radio" name="Service direction" value="Basic Automation RM500-1200" /> Basic Automation (RM500-1,200)</label>
-              <label><input type="radio" name="Service direction" value="AI Automation Flow RM1500-3500" /> AI Automation Flow (RM1,500-3,500)</label>
-              <label><input type="radio" name="Service direction" value="AI Chatbot RM2000-4500" /> AI Chatbot (RM2,000-4,500)</label>
-            </div>
-          </fieldset>
-          <fieldset>
-            <legend data-i18n="supportType">Preferred support type</legend>
-            <div class="radio-stack compact">
-              <label><input type="radio" name="Support type" value="One-time setup only" /> One-time setup only</label>
-              <label><input type="radio" name="Support type" value="Monthly support" /> Monthly support</label>
-              <label><input type="radio" name="Support type" value="Both" /> Both</label>
-            </div>
-          </fieldset>
-        </section>
-
-        <section class="form-section">
-          <div class="form-section-heading">
-            <span>05</span>
-            <h2 data-i18n="budgetNotes">Budget and additional notes</h2>
-          </div>
-          <div class="field-grid">
-            <label>
-              <span data-i18n="budget">Approximate budget</span>
-              <select name="Approximate budget">
-                <option value="Below RM500">Below RM500</option>
-                <option value="RM500-1500">RM500-1,500</option>
-                <option value="RM1500-3500">RM1,500-3,500</option>
-                <option value="RM3500-5000">RM3,500-5,000</option>
-                <option value="Above RM5000">Above RM5,000</option>
-                <option value="Discuss first">Discuss first</option>
-              </select>
-            </label>
-            <label class="field-wide">
-              <span data-i18n="notes">Anything else you would like us to know?</span>
-              <textarea name="Additional notes" rows="4"></textarea>
-            </label>
-          </div>
-          <p class="form-note" data-i18n="costNote">
-            Platform costs are paid directly by the client. Account management add-on is RM100/hr or a fixed monthly fee by arrangement.
-          </p>
-        </section>
-
-        <div class="form-actions">
-          <button class="button" type="submit" data-i18n="submitForm">Submit workflow intake</button>
-          <button class="button button-secondary" type="button" data-copy-summary data-i18n="copyPlain">Copy as plain text</button>
+    <form class="wrap intake" data-intake-form novalidate>
+      <div class="form-card reveal">
+        <div class="form-card-head"><span class="n">1</span><h2 data-i18n="s1">Your details</h2></div>
+        <div class="field-grid">
+          <label class="field"><span data-i18n="lblName">Full name <em class="req">*</em></span><input name="Name" required placeholder="Tan Wei Ming" /></label>
+          <label class="field"><span data-i18n="lblCompany">Company</span><input name="Company" placeholder="Your business" /></label>
+          <label class="field"><span data-i18n="lblPhone">WhatsApp / phone <em class="req">*</em></span><input name="Phone" required placeholder="+60 1X-XXX XXXX" /></label>
+          <label class="field"><span data-i18n="lblEmail">Email</span><input name="Email" type="email" placeholder="you@company.com" /></label>
+          <label class="field wide"><span data-i18n="lblIndustry">Industry / business type</span><input name="Industry" placeholder="e.g. Retail, e-commerce, professional services" /></label>
         </div>
+      </div>
 
-        <output class="summary-output" data-summary hidden></output>
-      </form>
-    </main>
+      <div class="form-card reveal d1">
+        <div class="form-card-head"><span class="n">2</span><h2 data-i18n="s2">Manual work &amp; tools</h2></div>
+        <div class="field-grid">
+          <label class="field wide"><span data-i18n="lblTime">What's taking the most time right now?</span><textarea name="Time-consuming work" placeholder="Describe the manual process that drains the most hours…"></textarea></label>
+          <fieldset class="field wide">
+            <legend data-i18n="lblTools">Which platforms / tools do you use today?</legend>
+            <div class="check-grid">
+              <label class="opt"><input type="checkbox" name="Tools" value="Excel" /> Excel</label>
+              <label class="opt"><input type="checkbox" name="Tools" value="Google Sheets" /> Google Sheets</label>
+              <label class="opt"><input type="checkbox" name="Tools" value="WhatsApp" /> WhatsApp</label>
+              <label class="opt"><input type="checkbox" name="Tools" value="Telegram" /> Telegram</label>
+              <label class="opt"><input type="checkbox" name="Tools" value="Forms" /> <span data-i18n="toolForms">Forms</span></label>
+              <label class="opt"><input type="checkbox" name="Tools" value="Other" /> <span data-i18n="toolOther">Other</span></label>
+            </div>
+          </fieldset>
+          <label class="field wide"><span data-i18n="lblVolume">Rough volume per day / week</span><input name="Volume" placeholder="e.g. ~80 WhatsApp enquiries a day" /></label>
+        </div>
+      </div>
 
-    <footer class="footer">
-      <a class="whatsapp-link footer-whatsapp" href="https://wa.me/601128229985" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp AI Omic at +60 11-2822 9985">
-        <img class="whatsapp-icon" src="assets/brand/whatsapp.svg" alt="" />
-        <span>WhatsApp</span>
+      <div class="form-card reveal d1">
+        <div class="form-card-head"><span class="n">3</span><h2 data-i18n="s3">Desired outcome</h2></div>
+        <div class="field-grid">
+          <label class="field wide"><span data-i18n="lblProblem">The one problem you most want solved</span><textarea name="Main problem" placeholder="If we fixed just one thing, what would it be?"></textarea></label>
+          <label class="field wide"><span data-i18n="lblSuccess">What does success look like for you?</span><textarea name="Success" placeholder="e.g. No missed enquiries, 5 hours/week saved on admin"></textarea></label>
+          <label class="field"><span data-i18n="lblTimeline">Timeline</span>
+            <select name="Timeline">
+              <option value="" data-i18n="optSelect">Select…</option>
+              <option data-i18n="tlASAP">As soon as possible</option>
+              <option data-i18n="tl12">1–2 weeks</option>
+              <option data-i18n="tlMonth">This month</option>
+              <option data-i18n="tlQuarter">This quarter</option>
+              <option data-i18n="tlExplore">Just exploring</option>
+            </select>
+          </label>
+        </div>
+      </div>
+
+      <div class="form-card reveal d1">
+        <div class="form-card-head"><span class="n">4</span><h2 data-i18n="s4">Service fit</h2></div>
+        <fieldset class="field" style="margin-bottom:18px">
+          <legend data-i18n="lblDirection">Which service direction fits best? <em class="req">*</em></legend>
+          <div class="radio-row">
+            <label class="opt"><input type="radio" name="Service direction" value="Workflow Audit" required /> Workflow Audit</label>
+            <label class="opt"><input type="radio" name="Service direction" value="Basic Automation" /> Basic Automation</label>
+            <label class="opt"><input type="radio" name="Service direction" value="AI Automation Flow" /> AI Automation Flow</label>
+            <label class="opt"><input type="radio" name="Service direction" value="AI Chatbot" /> AI Chatbot</label>
+            <label class="opt"><input type="radio" name="Service direction" value="Not sure" /> <span data-i18n="dirNotSure">Not sure yet</span></label>
+          </div>
+        </fieldset>
+        <fieldset class="field">
+          <legend data-i18n="lblSupport">Preferred support type</legend>
+          <div class="radio-row">
+            <label class="opt"><input type="radio" name="Support type" value="One-off" /> <span data-i18n="supOnce">One-off build</span></label>
+            <label class="opt"><input type="radio" name="Support type" value="Monthly" /> <span data-i18n="supMonthly">Monthly support</span></label>
+            <label class="opt"><input type="radio" name="Support type" value="Not sure" /> <span data-i18n="supNotSure">Not sure</span></label>
+          </div>
+        </fieldset>
+      </div>
+
+      <div class="form-card reveal d1">
+        <div class="form-card-head"><span class="n">5</span><h2 data-i18n="s5">Budget &amp; notes</h2></div>
+        <div class="field-grid">
+          <label class="field"><span data-i18n="lblBudget">Approximate budget</span>
+            <select name="Budget">
+              <option value="" data-i18n="optSelect">Select…</option>
+              <option>Under RM 500</option>
+              <option>RM 500–1,200</option>
+              <option>RM 1,500–3,500</option>
+              <option>RM 2,000–4,500</option>
+              <option>RM 5,000+</option>
+              <option data-i18n="budNotSure">Not sure</option>
+            </select>
+          </label>
+          <label class="field wide"><span data-i18n="lblNotes">Anything else we should know?</span><textarea name="Notes" placeholder="Links, screenshots to send later, deadlines…"></textarea></label>
+        </div>
+        <p class="form-note" style="margin-top:16px" data-i18n="costNote">Platform costs (n8n, AI APIs, WhatsApp Business) are paid directly by the client.</p>
+      </div>
+
+      <div class="form-actions reveal">
+        <button class="btn btn-ghost" type="button" data-copy-summary data-i18n="btnCopy">Copy as text</button>
+        <button class="btn btn-primary" type="submit" data-i18n="btnSubmit">Submit requirements</button>
+      </div>
+      <output class="summary-out" data-summary aria-live="polite"></output>
+    </form>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap footer-inner">
+      <a class="brand" href="index.html">
+        <img class="brand-mark" src="assets/brand/ai-omic-logo.png" alt="" />
+        <span class="brand-txt"><strong>AI Omic</strong><small data-i18n="brandSlogan2">Make Work Flow Better · 让工作流更顺</small></span>
       </a>
-      <p data-i18n="footerText">Platform costs are paid directly by the client. Account management add-on: RM100/hr or fixed monthly fee by arrangement.</p>
-      <p>Ad-hoc rate: RM 100/hr</p>
-    </footer>
+      <p class="footer-meta" data-i18n="footerMeta">Platform costs (n8n, AI APIs, WhatsApp Business) are paid directly by the client. Ad-hoc rate RM 100/hr. <a href="https://wa.me/601128229985" target="_blank" rel="noopener">WhatsApp +60 11-2822 9985</a></p>
+    </div>
+  </footer>
 
-    <script src="assets/app.js?v=20260524-client-results"></script>
-  </body>
+  <script src="app.js"></script>
+</body>
 </html>

@@ -1,192 +1,153 @@
 <!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Sales and Aftercare Playbook</title>
-    <meta name="description" content="AI Omic WhatsApp replies, quote checklist, handover template, and monthly support rules." />
-    <meta property="og:title" content="AI Omic Sales and Aftercare Playbook" />
-    <meta
-      property="og:description"
-      content="AI Omic WhatsApp replies, quote checklist, handover template, and monthly support rules."
-    />
-    <meta property="og:image" content="https://my-pricing-list.zeabur.app/assets/brand/ai-omic-logo.png" />
-    <link rel="icon" type="image/png" href="assets/brand/ai-omic-icon.png" />
-    <link rel="apple-touch-icon" href="assets/brand/apple-touch-icon.png" />
-    <link rel="stylesheet" href="assets/styles.css?v=20260524-client-results" />
-  </head>
-  <body>
-    <header class="site-header">
+<html lang="en" data-theme="dark" data-motion="balanced">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Playbook — AI Omic</title>
+  <meta name="description" content="Presales and aftercare templates for the AI Omic team: WhatsApp replies, audit scripts, quotes, handover and sign-off." />
+  <link rel="icon" type="image/png" href="assets/brand/ai-omic-logo.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Hanken+Grotesk:wght@400;500;600;700&family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="pages.css" />
+</head>
+<body>
+  <div class="bg-layer"></div>
+  <canvas id="net-canvas"></canvas>
+
+  <header class="header" id="header">
+    <div class="wrap header-inner">
       <a class="brand" href="index.html" aria-label="AI Omic home">
-        <img class="brand-logo" src="assets/brand/ai-omic-icon.png" alt="" />
-        <span>
-          <strong>AI Omic</strong>
-          <small>Make Work Flow Better</small>
-        </span>
+        <img class="brand-mark" src="assets/brand/ai-omic-logo.png" alt="AI Omic logo" />
+        <span class="brand-txt"><strong>AI Omic</strong><small data-i18n="brandSlogan">Make Work Flow Better</small></span>
       </a>
-      <nav class="nav" aria-label="Main navigation">
+      <nav class="nav" aria-label="Main">
         <a href="index.html#packages" data-i18n="navPackages">Packages</a>
-        <a href="index.html#results" data-i18n="navTestimonials">Testimonials</a>
-        <a href="index.html#sales" data-i18n="navSales">Sales Flow</a>
+        <a href="index.html#results" data-i18n="navResults">Results</a>
         <a href="blog.html" data-i18n="navBlog">Blog</a>
-        <a href="intake-form.html" data-i18n="navCta">Get Started</a>
+        <a href="playbook.html" data-i18n="navPlaybook" aria-current="page">Playbook</a>
       </nav>
       <div class="header-actions">
-        <button class="lang-toggle" type="button" data-lang-toggle aria-label="Switch language">中文</button>
-        <a class="whatsapp-link" href="https://wa.me/601128229985" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp AI Omic at +60 11-2822 9985">
-          <img class="whatsapp-icon" src="assets/brand/whatsapp.svg" alt="" />
-          <span>WhatsApp</span>
+        <button class="lang-toggle" type="button" id="langToggle" aria-label="Switch language">中文</button>
+        <a class="wa" href="https://wa.me/601128229985" target="_blank" rel="noopener noreferrer">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2Zm0 18.13c-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.2 8.2 0 0 1-1.26-4.38c0-4.54 3.7-8.23 8.25-8.23a8.2 8.2 0 0 1 5.83 2.42 8.18 8.18 0 0 1 2.41 5.82c0 4.54-3.7 8.23-8.24 8.23Zm4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.13-.16.25-.64.81-.78.97-.14.17-.29.19-.54.06-.25-.12-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.01-.38.11-.51.11-.11.25-.29.37-.43.13-.14.17-.25.25-.41.08-.17.04-.31-.02-.43-.06-.12-.56-1.35-.77-1.85-.2-.48-.41-.42-.56-.42l-.48-.01c-.17 0-.43.06-.66.31-.23.25-.86.85-.86 2.07 0 1.22.89 2.4 1.01 2.56.12.17 1.75 2.67 4.23 3.74.59.26 1.05.41 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.14-1.18-.06-.1-.22-.16-.47-.28Z"/></svg>
+          <span data-i18n="waLabel">WhatsApp</span>
         </a>
+        <a class="btn btn-primary btn-sm" href="intake-form.html" data-i18n="navCta">Get started</a>
       </div>
-    </header>
+    </div>
+  </header>
 
-    <main>
-      <section class="form-hero">
+  <main>
+    <section class="wrap page-hero solo">
+      <div class="reveal">
+        <p class="crumb"><a href="index.html" data-i18n="crumbHome">Home</a><span>/</span><span data-i18n="crumbPlaybook">Playbook</span></p>
+        <p class="eyebrow" data-i18n="pbEyebrow">Internal execution templates</p>
+        <h1 data-i18n="pbTitle">Presales &amp; aftercare <span class="grad">playbook.</span></h1>
+        <p class="lede" data-i18n="pbLede">Copy-paste templates that keep WhatsApp replies, quotes, handover and aftercare boundaries consistent across every project.</p>
+      </div>
+    </section>
+
+    <div class="wrap">
+      <div class="rule-band reveal">
+        <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="22" height="22"><path d="M12 2l3 7h7l-5.5 4.5L18.5 22 12 17.5 5.5 22 7.5 13.5 2 9h7Z"/></svg></span>
         <div>
-          <p class="hero-meta" data-i18n="playbookMeta">Internal operating templates</p>
-          <p class="brand-slogan">
-            <span>Make Work Flow Better.</span>
-            <span>让工作流更顺。</span>
-          </p>
-          <h1 data-i18n="playbookTitle">Sales and Aftercare Playbook</h1>
-          <p data-i18n="playbookIntro">Use these templates to keep WhatsApp replies, quotations, handover, and support boundaries consistent.</p>
+          <h3 data-i18n="pbRuleT">Default rule</h3>
+          <p data-i18n="pbRuleD">The free consult only judges fit. Detailed solution design always lives inside the paid Workflow Audit.</p>
         </div>
-        <aside class="response-card">
-          <strong data-i18n="playbookRuleTitle">Default rule</strong>
-          <p data-i18n="playbookRuleText">Free consultation qualifies fit. Detailed solution design belongs inside the paid Workflow Audit.</p>
-        </aside>
-      </section>
+      </div>
 
-      <section class="template-grid">
-        <article class="template-card">
-          <h2 data-i18n="waTitle">WhatsApp first reply</h2>
-          <pre data-copy-block>Hello {{Name}}, thanks for sharing your workflow details.
+      <div class="tmpl-grid">
+        <article class="tmpl-card reveal d1">
+          <div class="tmpl-top"><h3><span class="motif-dot" style="width:30px;height:30px;color:#25d366"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2Z"/></svg></span><span data-i18n="t1Title">WhatsApp first reply</span></h3><span class="tag">WhatsApp</span></div>
+          <pre data-copy-block>Hi [Name], thanks for reaching out to AI Omic 👋
 
-I will review your current process and reply within 1 business day.
+Got your enquiry about [topic]. To check if automation is a good fit, can I confirm:
+• Which manual task takes the most time?
+• Which tools do you use now (Sheets, WhatsApp, Excel…)?
+• Rough volume per day / week?
 
-For the first call, we will only confirm 5 things:
-1. Main pain point
-2. Current tools
-3. Daily/weekly volume
-4. Budget range
-5. Timeline
-
-If the workflow is clear, I can prepare a quote.
-If the workflow is unclear, I recommend a Workflow Audit at RM299-RM499.</pre>
-          <button class="button button-secondary" type="button" data-copy-template data-i18n="copyTemplate">Copy template</button>
+We'll reply with next steps within 1 business day.</pre>
+          <button class="copy-btn" type="button" data-copy-template><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg><span data-i18n="copyBtn">Copy template</span></button>
         </article>
 
-        <article class="template-card">
-          <h2 data-i18n="auditTemplateTitle">Workflow Audit offer</h2>
-          <pre data-copy-block>Based on what you shared, the scope is still not clear enough for a responsible fixed quote.
+        <article class="tmpl-card reveal d2">
+          <div class="tmpl-top"><h3><span class="motif-dot" style="width:30px;height:30px"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3v18h18"/><path d="M7 14l3-3 3 3 5-6"/></svg></span><span data-i18n="t2Title">Workflow Audit script</span></h3><span class="tag">Audit</span></div>
+          <pre data-copy-block>For unclear scope we start with a paid Workflow Audit (RM 299–499).
 
-I recommend starting with a Workflow Audit at RM299-RM499.
+You get:
+• A simple process map
+• Recommended automation path
+• Budget range
+• An implementation plan
 
-You will receive:
-- Simple process map
-- Automation recommendation
-- Budget range
-- Implementation steps
-- Suggested package
-
-If you proceed with the build, the audit helps avoid wrong scope and unnecessary features.</pre>
-          <button class="button button-secondary" type="button" data-copy-template data-i18n="copyTemplate">Copy template</button>
+The audit fee is credited toward the build if you proceed within 30 days.</pre>
+          <button class="copy-btn" type="button" data-copy-template><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg><span data-i18n="copyBtn2">Copy template</span></button>
         </article>
 
-        <article class="template-card">
-          <h2 data-i18n="quoteTemplateTitle">Quotation structure</h2>
-          <pre data-copy-block>Project: {{Project name}}
-Package: {{Workflow Audit / Basic Automation / AI Automation Flow / AI Chatbot}}
-One-time setup: RM {{Amount}}
-Monthly support: RM {{Amount}} / month
+        <article class="tmpl-card reveal d1">
+          <div class="tmpl-top"><h3><span class="motif-dot" style="width:30px;height:30px"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8Z"/><path d="M14 2v6h6M9 13h6M9 17h4"/></svg></span><span data-i18n="t3Title">Quote structure</span></h3><span class="tag">Quote</span></div>
+          <pre data-copy-block>Every quote states:
 
-Scope:
-- {{Outcome 1}}
-- {{Outcome 2}}
-- {{Outcome 3}}
-
-Deliverables:
-- Workflow design and build
-- Testing and bug fixing
-- AI prompt tuning where applicable
-- Basic training
-- Handover document
-- 1 revision after delivery
-- 14 days WhatsApp support
-
-Not included:
-- n8n Cloud / hosting fees
-- OpenAI / Claude API costs
-- WhatsApp Business API fees
-- Google Workspace / domains
-- Extra revisions beyond scope
-- New features after sign-off
-
-Payment:
-50% deposit to start
-50% before handover</pre>
-          <button class="button button-secondary" type="button" data-copy-template data-i18n="copyTemplate">Copy template</button>
+1. Project scope & expected outcome
+2. Deliverables & handover items
+3. Revision limit & support window
+4. Estimated delivery timeline
+5. 50% deposit + 50% before handover
+6. Third-party costs paid directly by client</pre>
+          <button class="copy-btn" type="button" data-copy-template><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg><span data-i18n="copyBtn3">Copy template</span></button>
         </article>
 
-        <article class="template-card">
-          <h2 data-i18n="handoverTitle">Handover checklist</h2>
-          <pre data-copy-block>Handover checklist:
-- Final workflow name and purpose
-- Tools connected
-- Account owner and access notes
-- How to trigger the workflow
-- What the workflow does
-- What to check when something fails
-- Known limits
-- Revision used / remaining
-- 14-day WhatsApp support end date
-- Monthly support option</pre>
-          <button class="button button-secondary" type="button" data-copy-template data-i18n="copyTemplate">Copy template</button>
+        <article class="tmpl-card reveal d2">
+          <div class="tmpl-top"><h3><span class="motif-dot" style="width:30px;height:30px"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg></span><span data-i18n="t4Title">Handover checklist</span></h3><span class="tag">Delivery</span></div>
+          <pre data-copy-block>☐ Kickoff & access checklist
+☐ Workflow confirmed
+☐ Build & internal testing
+☐ Client acceptance test
+☐ Training + handover doc
+☐ Sign-off & support start date</pre>
+          <button class="copy-btn" type="button" data-copy-template><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg><span data-i18n="copyBtn4">Copy template</span></button>
         </article>
 
-        <article class="template-card">
-          <h2 data-i18n="supportTemplateTitle">Monthly support scope</h2>
-          <pre data-copy-block>Monthly support includes:
-- Bug fixing for the delivered workflow
-- Monitoring and light troubleshooting
-- Small adjustments within the same workflow
-- Light AI prompt tuning
-- WhatsApp support during business hours
+        <article class="tmpl-card reveal d1">
+          <div class="tmpl-top"><h3><span class="motif-dot" style="width:30px;height:30px"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"/></svg></span><span data-i18n="t5Title">Monthly support scope</span></h3><span class="tag">Aftercare</span></div>
+          <pre data-copy-block>Included: monitoring, bug fixing, small adjustments, light prompt tuning.
 
-Monthly support does not include:
-- New features
-- New workflows
-- Extra revisions beyond agreed scope
-- Third-party platform fees
-- Full account management unless separately arranged</pre>
-          <button class="button button-secondary" type="button" data-copy-template data-i18n="copyTemplate">Copy template</button>
+Not included: new features, new integrations, scope changes (quoted separately).
+
+Tiers / month:
+• Basic RM 300–500
+• AI Flow RM 500–800
+• Chatbot RM 600–1,000</pre>
+          <button class="copy-btn" type="button" data-copy-template><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg><span data-i18n="copyBtn5">Copy template</span></button>
         </article>
 
-        <article class="template-card">
-          <h2 data-i18n="signoffTitle">Sign-off message</h2>
-          <pre data-copy-block>The workflow has been delivered and tested based on the agreed scope.
+        <article class="tmpl-card reveal d2">
+          <div class="tmpl-top"><h3><span class="motif-dot" style="width:30px;height:30px"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M20 6 9 17l-5-5"/></svg></span><span data-i18n="t6Title">Sign-off message</span></h3><span class="tag">Sign-off</span></div>
+          <pre data-copy-block>Hi [Name], [project] is live and signed off ✅
 
-Please confirm sign-off once the acceptance test is complete.
+• 14-day WhatsApp support starts today: [date]
+• Handover doc: [link]
+• Monthly support (optional) begins after day 14.
 
-After sign-off:
-- 14-day WhatsApp support starts from {{Date}}
-- 1 included revision is considered used if changes are requested after delivery
-- New features or extra changes will be quoted separately
-- Monthly support is available from RM {{Amount}} / month</pre>
-          <button class="button button-secondary" type="button" data-copy-template data-i18n="copyTemplate">Copy template</button>
+Thanks for trusting AI Omic to make this flow better.</pre>
+          <button class="copy-btn" type="button" data-copy-template><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg><span data-i18n="copyBtn6">Copy template</span></button>
         </article>
-      </section>
-    </main>
+      </div>
+    </div>
+  </main>
 
-    <footer class="footer">
-      <a class="whatsapp-link footer-whatsapp" href="https://wa.me/601128229985" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp AI Omic at +60 11-2822 9985">
-        <img class="whatsapp-icon" src="assets/brand/whatsapp.svg" alt="" />
-        <span>WhatsApp</span>
+  <footer class="footer">
+    <div class="wrap footer-inner">
+      <a class="brand" href="index.html">
+        <img class="brand-mark" src="assets/brand/ai-omic-logo.png" alt="" />
+        <span class="brand-txt"><strong>AI Omic</strong><small data-i18n="brandSlogan2">Make Work Flow Better · 让工作流更顺</small></span>
       </a>
-      <p data-i18n="footerText">Platform costs are paid directly by the client. Account management add-on: RM100/hr or fixed monthly fee by arrangement.</p>
-      <p>Ad-hoc rate: RM 100/hr</p>
-    </footer>
+      <p class="footer-meta" data-i18n="footerMeta">Platform costs (n8n, AI APIs, WhatsApp Business) are paid directly by the client. Ad-hoc rate RM 100/hr. <a href="https://wa.me/601128229985" target="_blank" rel="noopener">WhatsApp +60 11-2822 9985</a></p>
+    </div>
+  </footer>
 
-    <script src="assets/app.js?v=20260524-client-results"></script>
-  </body>
+  <script src="app.js"></script>
+</body>
 </html>

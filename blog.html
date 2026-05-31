@@ -1,139 +1,117 @@
 <!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>AI Omic Blog | Workflow Automation for SMEs</title>
-    <meta
-      name="description"
-      content="AI Omic articles on workflow friction, OCR automation, AI workflows, and SME operating systems."
-    />
-    <meta property="og:title" content="AI Omic Blog | Workflow Automation for SMEs" />
-    <meta
-      property="og:description"
-      content="Practical AI Omic articles on workflow automation, OCR, AI assistants, and SME operating systems."
-    />
-    <meta property="og:image" content="https://my-pricing-list.zeabur.app/assets/brand/ai-omic-logo.png" />
-    <link rel="icon" type="image/png" href="assets/brand/ai-omic-icon.png" />
-    <link rel="apple-touch-icon" href="assets/brand/apple-touch-icon.png" />
-    <link rel="stylesheet" href="assets/styles.css?v=20260524-client-results" />
-  </head>
-  <body>
-    <header class="site-header">
+<html lang="en" data-theme="dark" data-motion="balanced">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Blog — AI Omic</title>
+  <meta name="description" content="Practical automation and AI workflow notes for Malaysian SMEs from the AI Omic team." />
+  <link rel="icon" type="image/png" href="assets/brand/ai-omic-logo.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Hanken+Grotesk:wght@400;500;600;700&family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="pages.css" />
+</head>
+<body>
+  <div class="bg-layer"></div>
+  <canvas id="net-canvas"></canvas>
+
+  <header class="header" id="header">
+    <div class="wrap header-inner">
       <a class="brand" href="index.html" aria-label="AI Omic home">
-        <img class="brand-logo" src="assets/brand/ai-omic-icon.png" alt="" />
-        <span>
-          <strong>AI Omic</strong>
-          <small>Make Work Flow Better</small>
-        </span>
+        <img class="brand-mark" src="assets/brand/ai-omic-logo.png" alt="AI Omic logo" />
+        <span class="brand-txt"><strong>AI Omic</strong><small data-i18n="brandSlogan">Make Work Flow Better</small></span>
       </a>
-      <nav class="nav" aria-label="Main navigation">
+      <nav class="nav" aria-label="Main">
         <a href="index.html#packages" data-i18n="navPackages">Packages</a>
-        <a href="index.html#results" data-i18n="navTestimonials">Testimonials</a>
-        <a href="index.html#sales" data-i18n="navSales">Sales Flow</a>
-        <a href="index.html#support" data-i18n="navSupport">Aftercare</a>
-        <a href="blog.html" data-i18n="navBlog">Blog</a>
+        <a href="index.html#results" data-i18n="navResults">Results</a>
+        <a href="blog.html" data-i18n="navBlog" aria-current="page">Blog</a>
         <a href="playbook.html" data-i18n="navPlaybook">Playbook</a>
       </nav>
       <div class="header-actions">
-        <button class="lang-toggle" type="button" data-lang-toggle aria-label="Switch language">中文</button>
-        <a class="whatsapp-link" href="https://wa.me/601128229985" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp AI Omic at +60 11-2822 9985">
-          <img class="whatsapp-icon" src="assets/brand/whatsapp.svg" alt="" />
-          <span>WhatsApp</span>
+        <button class="lang-toggle" type="button" id="langToggle" aria-label="Switch language">中文</button>
+        <a class="wa" href="https://wa.me/601128229985" target="_blank" rel="noopener noreferrer">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2Zm0 18.13c-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.2 8.2 0 0 1-1.26-4.38c0-4.54 3.7-8.23 8.25-8.23a8.2 8.2 0 0 1 5.83 2.42 8.18 8.18 0 0 1 2.41 5.82c0 4.54-3.7 8.23-8.24 8.23Zm4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.13-.16.25-.64.81-.78.97-.14.17-.29.19-.54.06-.25-.12-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.01-.38.11-.51.11-.11.25-.29.37-.43.13-.14.17-.25.25-.41.08-.17.04-.31-.02-.43-.06-.12-.56-1.35-.77-1.85-.2-.48-.41-.42-.56-.42l-.48-.01c-.17 0-.43.06-.66.31-.23.25-.86.85-.86 2.07 0 1.22.89 2.4 1.01 2.56.12.17 1.75 2.67 4.23 3.74.59.26 1.05.41 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.14-1.18-.06-.1-.22-.16-.47-.28Z"/></svg>
+          <span data-i18n="waLabel">WhatsApp</span>
         </a>
-        <a class="button button-small" href="intake-form.html" data-i18n="navCta">Get Started</a>
+        <a class="btn btn-primary btn-sm" href="intake-form.html" data-i18n="navCta">Get started</a>
       </div>
-    </header>
+    </div>
+  </header>
 
-    <main>
-      <section class="blog-hero">
-        <p class="hero-meta">AI Omic Blog</p>
-        <p class="brand-slogan">
-          <span>Make Work Flow Better.</span>
-          <span>让工作流更顺。</span>
-        </p>
-        <h1>Practical notes on workflow automation, OCR, and AI operations.</h1>
-        <p>
-          Use these articles to understand where automation creates value: reducing workflow friction, moving documents
-          faster, and helping SME teams spend less time copying information between tools.
-        </p>
-      </section>
+  <main>
+    <section class="wrap page-hero solo">
+      <div class="reveal">
+        <p class="crumb"><a href="index.html" data-i18n="crumbHome">Home</a><span>/</span><span data-i18n="crumbBlog">Blog</span></p>
+        <p class="eyebrow" data-i18n="blogEyebrow">Notes from the workshop</p>
+        <h1 data-i18n="blogTitle">Practical automation, <span class="grad">no hype.</span></h1>
+        <p class="lede" data-i18n="blogLede">Field notes on automating real SME work in Malaysia — what to automate first, what to leave alone, and how to keep AI useful.</p>
+      </div>
+    </section>
 
-      <section class="blog-index" aria-label="Blog posts">
-        <article class="blog-card">
-          <img src="assets/blog/ai-prompt/ai-prompt-1.jpg" alt="AI prompt orchestration article cover" />
-          <div>
-            <p class="blog-meta">AI Workflow · 中文 · May 16, 2026</p>
-            <h2>AI 正在从 Prompt 走向流程编排。</h2>
-            <p>
-              如果 AI 生成内容后还需要你手动复制、整理、排版和发送，真正的瓶颈可能不是 AI，而是还没有被自动化的工作流。
-            </p>
-            <a class="button button-secondary" href="#ai-prompt-orchestration">Read post</a>
+    <div class="wrap">
+      <div class="blog-grid">
+        <a class="blog-card feature reveal" href="#ai-prompt-orchestration">
+          <div class="blog-thumb"><span class="ph" data-i18n="phCover">Cover image</span></div>
+          <div class="blog-body">
+            <p class="blog-meta" data-i18n="cat1">AI Workflow <span>·</span> 中文</p>
+            <h2 data-i18n="post1t">AI is moving from prompts to workflow orchestration.</h2>
+            <p data-i18n="post1d">If AI-generated content still needs manual copying, sorting, formatting and sending, the real bottleneck is the workflow around the AI.</p>
+            <span class="blog-readmore" data-i18n="readMore">Read article <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
           </div>
-        </article>
+        </a>
 
-        <article class="blog-card">
-          <img src="assets/blog/ai-role/ai-role-1.jpg" alt="AI multi-agent role article cover" />
-          <div>
-            <p class="blog-meta">AI Workflow · 中文 · May 16, 2026</p>
-            <h2>好的 AI 报告，靠的不是一个神仙 Prompt。</h2>
-            <p>
-              深度内容的质量，往往来自多智能体分工：规划、标题、章节撰写、参考资料和目录整理各自负责不同角色。
-            </p>
-            <a class="button button-secondary" href="#ai-role-agents">Read post</a>
+        <a class="blog-card reveal d1" href="#ai-role-agents">
+          <div class="blog-thumb"><span class="ph" data-i18n="phCover">Cover image</span></div>
+          <div class="blog-body">
+            <p class="blog-meta" data-i18n="cat2">AI Workflow <span>·</span> 中文</p>
+            <h2 data-i18n="post2t">A strong AI report does not come from one magic prompt.</h2>
+            <p data-i18n="post2d">Deep content improves when multiple AI roles handle planning, titles, sections, references and table-of-contents work separately.</p>
+            <span class="blog-readmore" data-i18n="readMore2">Read article <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
           </div>
-        </article>
+        </a>
 
-        <article class="blog-card">
-          <img src="assets/blog/ai-orchestration/ai-orchestration-1.jpg" alt="AI orchestration article cover" />
-          <div>
-            <p class="blog-meta">AI Workflow · 中文 · May 16, 2026</p>
-            <h2>不懂代码，也可以成为 AI 系统调度者。</h2>
-            <p>
-              未来的效率优势，不是找一个无所不能的模型，而是把 GPT、Claude、Perplexity、DeepSeek 等工具串成一个能解决问题的系统。
-            </p>
-            <a class="button button-secondary" href="#ai-orchestration-code">Read post</a>
+        <a class="blog-card reveal d2" href="#ai-orchestration-code">
+          <div class="blog-thumb"><span class="ph" data-i18n="phCover">Cover image</span></div>
+          <div class="blog-body">
+            <p class="blog-meta" data-i18n="cat3">AI Workflow <span>·</span> 中文</p>
+            <h2 data-i18n="post3t">You can become an AI system orchestrator without coding.</h2>
+            <p data-i18n="post3d">The next efficiency jump comes from assigning different AI tools to different parts of a repeatable workflow.</p>
+            <span class="blog-readmore" data-i18n="readMore3">Read article <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
           </div>
-        </article>
+        </a>
 
-        <article class="blog-card">
-          <img src="assets/blog/ocr/ocr-1.jpg" alt="OCR article cover about invoices and documents" />
-          <div>
-            <p class="blog-meta">OCR Automation · 中文 · May 15, 2026</p>
-            <h2>每天都在处理成堆的发票和单据？</h2>
-            <p>
-              通过 OCR 与 AI 自动提取、分类和归档文件，让收据、发票、财务报表和知识归档不再靠人工逐页翻找。
-            </p>
-            <a class="button button-secondary" href="#ocr-automation">Read post</a>
+        <a class="blog-card reveal d1" href="#ocr-automation">
+          <div class="blog-thumb"><span class="ph" data-i18n="phCover">Cover image</span></div>
+          <div class="blog-body">
+            <p class="blog-meta" data-i18n="cat4">OCR Automation <span>·</span> 中文</p>
+            <h2 data-i18n="post4t">Still handling piles of invoices and documents?</h2>
+            <p data-i18n="post4d">OCR and AI can turn receipts, invoices, financial reports and archive search into a smoother document workflow.</p>
+            <span class="blog-readmore" data-i18n="readMore4">Read article <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
           </div>
-        </article>
+        </a>
 
-        <article class="blog-card">
-          <img src="assets/blog/workflow-cn/workflow-1.jpg" alt="Chinese workflow article cover" />
-          <div>
-            <p class="blog-meta">Workflow Friction · 中文 · May 15, 2026</p>
-            <h2>企业真正的瓶颈，是信息怎样流动。</h2>
-            <p>
-              企业采用 AI 与自动化的核心价值，不是取代员工，而是降低 workflow friction，让人专注判断、异常处理和决策。
-            </p>
-            <a class="button button-secondary" href="#workflow-cn">Read post</a>
+        <a class="blog-card reveal d2" href="#workflow-cn">
+          <div class="blog-thumb"><span class="ph" data-i18n="phCover">Cover image</span></div>
+          <div class="blog-body">
+            <p class="blog-meta" data-i18n="cat5">Workflow Friction <span>·</span> 中文</p>
+            <h2 data-i18n="post5t">The real business bottleneck is how information flows.</h2>
+            <p data-i18n="post5d">AI and automation matter because they reduce workflow friction, not because they simply replace people.</p>
+            <span class="blog-readmore" data-i18n="readMore5">Read article <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
           </div>
-        </article>
+        </a>
 
-        <article class="blog-card">
-          <img src="assets/blog/workflow-en/workflow-infographic.jpg" alt="English workflow infographic" />
-          <div>
-            <p class="blog-meta">Workflow Friction · English · May 15, 2026</p>
-            <h2>The future company may be organized around workflows.</h2>
-            <p>
-              AI changes the operating structure of companies by connecting OCR, classification, routing, exception review,
-              ERP updates, and audit trails.
-            </p>
-            <a class="button button-secondary" href="#workflow-en">Read post</a>
+        <a class="blog-card reveal d3" href="#workflow-en">
+          <div class="blog-thumb"><span class="ph" data-i18n="phCover">Cover image</span></div>
+          <div class="blog-body">
+            <p class="blog-meta" data-i18n="cat6">Workflow Friction <span>·</span> English</p>
+            <h2 data-i18n="post6t">The future company may be organized around workflows.</h2>
+            <p data-i18n="post6d">AI changes company operations by connecting OCR, classification, routing, exceptions, ERP updates and audit trails.</p>
+            <span class="blog-readmore" data-i18n="readMore6">Read article <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
           </div>
-        </article>
-      </section>
-
+        </a>
+      </div>
+    </div>
       <article id="ocr-automation" class="blog-post">
         <header class="post-header">
           <p class="blog-meta">OCR Automation · 中文 · May 15, 2026</p>
@@ -392,23 +370,23 @@
           <img src="assets/blog/ai-orchestration/ai-orchestration-6.jpg" alt="AI orchestration article slide 6" />
         </div>
       </article>
-
-      <section class="cta-section">
+      <section class="blog-cta reveal">
         <h2>Want to find your highest-friction workflow?</h2>
         <p>Start with the intake form. If the scope is unclear, AI Omic can map the workflow first through a paid audit.</p>
-        <a class="button" href="intake-form.html">Start with the intake form</a>
+        <a class="btn btn-primary" href="intake-form.html">Start with the intake form</a>
       </section>
-    </main>
+  </main>
 
-    <footer class="footer">
-      <a class="whatsapp-link footer-whatsapp" href="https://wa.me/601128229985" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp AI Omic at +60 11-2822 9985">
-        <img class="whatsapp-icon" src="assets/brand/whatsapp.svg" alt="" />
-        <span>WhatsApp</span>
+  <footer class="footer">
+    <div class="wrap footer-inner">
+      <a class="brand" href="index.html">
+        <img class="brand-mark" src="assets/brand/ai-omic-logo.png" alt="" />
+        <span class="brand-txt"><strong>AI Omic</strong><small data-i18n="brandSlogan2">Make Work Flow Better · 让工作流更顺</small></span>
       </a>
-      <p data-i18n="footerText">Platform costs are paid directly by the client. Account management add-on: RM100/hr or fixed monthly fee by arrangement.</p>
-      <p>Ad-hoc rate: RM 100/hr</p>
-    </footer>
+      <p class="footer-meta" data-i18n="footerMeta">Platform costs (n8n, AI APIs, WhatsApp Business) are paid directly by the client. Ad-hoc rate RM 100/hr. <a href="https://wa.me/601128229985" target="_blank" rel="noopener">WhatsApp +60 11-2822 9985</a></p>
+    </div>
+  </footer>
 
-    <script src="assets/app.js?v=20260524-client-results"></script>
-  </body>
+  <script src="app.js"></script>
+</body>
 </html>
