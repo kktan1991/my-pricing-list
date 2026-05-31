@@ -56,6 +56,13 @@ const translations = {
     result2Tag2: "AI 整理",
     result2Tag3: "管理支持",
     result2Tag4: "Revenue focus",
+    result3Role: "Product Manager · 制药行业",
+    result3Quote:
+      "“用 AI 准备 presentation slides 不只是帮我省下好几个小时，它彻底改变了我的工作流程。制作过程变快后，我不用再花太多时间处理版面，而是可以把更多时间放在优化 brand plan 和 strategy。最后产出的 deck 更专业，也明显提升了我们的工作质量，并让团队成员留下深刻印象。”",
+    result3Tag1: "Presentation slides",
+    result3Tag2: "Brand planning",
+    result3Tag3: "策略支持",
+    result3Tag4: "工作质量",
     salesLabel: "售前流程",
     salesTitle: "Lead 如何变成有范围的项目。",
     salesIntro: "第一次沟通不是免费帮客户设计完整方案，而是判断 fit；范围不清楚就进入付费审计。",

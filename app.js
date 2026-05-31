@@ -594,30 +594,37 @@
     assistant.setAttribute("aria-label", "Xiao O AI Omic assistant");
     assistant.innerHTML = `
       <button class="xiao-launcher" type="button" aria-expanded="false" aria-controls="xiao-panel">
-        <span class="xiao-bot" aria-hidden="true">
-          <span class="xiao-bot-halo"></span>
-          <span class="xiao-bot-antenna"></span>
-          <span class="xiao-bot-head">
-            <span class="xiao-bot-visor">
-              <span class="xiao-bot-eye"></span>
-              <span class="xiao-bot-eye"></span>
-            </span>
-          </span>
-          <span class="xiao-bot-body">
-            <span class="xiao-bot-core"></span>
-          </span>
-          <span class="xiao-bot-arm xiao-bot-arm-left"></span>
-          <span class="xiao-bot-arm xiao-bot-arm-right"></span>
-        </span>
+        <svg class="xiao-bot-svg" viewBox="0 0 40 46" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <defs>
+            <radialGradient id="xob-bg" cx="50%" cy="35%" r="65%">
+              <stop offset="0%" stop-color="#1e4a8a"/>
+              <stop offset="100%" stop-color="#091c44"/>
+            </radialGradient>
+            <filter id="xob-glow" x="-80%" y="-80%" width="260%" height="260%">
+              <feGaussianBlur in="SourceGraphic" stdDeviation="1.4" result="blur"/>
+              <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+            </filter>
+          </defs>
+          <line x1="20" y1="9" x2="20" y2="4" stroke="#19c9b3" stroke-width="2" stroke-linecap="round"/>
+          <circle cx="20" cy="3" r="2.4" fill="#19c9b3"/>
+          <rect x="3" y="10" width="34" height="28" rx="10" fill="url(#xob-bg)" stroke="rgba(116,184,255,0.38)" stroke-width="1.2"/>
+          <rect x="7" y="16" width="26" height="14" rx="6" fill="rgba(8,20,54,0.88)" stroke="rgba(59,134,255,0.22)" stroke-width="0.8"/>
+          <circle cx="14" cy="23" r="3.5" fill="#4df0e0" filter="url(#xob-glow)"/>
+          <circle cx="26" cy="23" r="3.5" fill="#4df0e0" filter="url(#xob-glow)"/>
+          <path d="M13.5 32.5 Q20 36.5 26.5 32.5" stroke="#19c9b3" stroke-width="1.6" stroke-linecap="round" fill="none"/>
+        </svg>
         <span class="sr-only">Open Xiao O assistant</span>
       </button>
       <div class="xiao-panel" id="xiao-panel" hidden>
         <header class="xiao-head">
-          <div>
-            <strong>Xiao O</strong>
-            <span>AI Omic assistant</span>
+          <div class="xiao-head-info">
+            <span class="xiao-head-dot" aria-hidden="true"></span>
+            <div>
+              <strong>Xiao O</strong>
+              <span>AI Omic assistant</span>
+            </div>
           </div>
-          <button class="xiao-close" type="button" aria-label="Close Xiao O">Close</button>
+          <button class="xiao-close" type="button" aria-label="Close Xiao O">✕</button>
         </header>
         <div class="xiao-messages" aria-live="polite"></div>
         <div class="xiao-prompts" aria-label="Suggested questions">
