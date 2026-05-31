@@ -420,7 +420,7 @@
     tlASAP: "尽快", tl12: "1–2 周", tlMonth: "这个月", tlQuarter: "这个季度", tlExplore: "只是了解",
     lblDirection: "哪一个服务方向比较适合？<em class='req'>*</em>", dirNotSure: "还不确定",
     lblSupport: "偏好的支持方式", supOnce: "一次性 build", supMonthly: "月费支持", supNotSure: "不确定",
-    lblBudget: "大概预算", budNotSure: "不确定",
+    lblBudget: "大概预算", budU500: "RM 500 以下", bud5000p: "RM 5,000 以上", budNotSure: "不确定",
     lblNotes: "还有什么想让我们知道？",
     costNote: "平台费用（n8n、AI API、WhatsApp Business）由客户直接支付。",
     btnCopy: "复制成文字", btnSubmit: "提交需求",
