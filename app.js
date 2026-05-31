@@ -498,7 +498,21 @@
     assistant.setAttribute("aria-label", "Xiao O AI Omic assistant");
     assistant.innerHTML = `
       <button class="xiao-launcher" type="button" aria-expanded="false" aria-controls="xiao-panel">
-        <span class="xiao-face" aria-hidden="true"><span></span><span></span></span>
+        <span class="xiao-bot" aria-hidden="true">
+          <span class="xiao-bot-halo"></span>
+          <span class="xiao-bot-antenna"></span>
+          <span class="xiao-bot-head">
+            <span class="xiao-bot-visor">
+              <span class="xiao-bot-eye"></span>
+              <span class="xiao-bot-eye"></span>
+            </span>
+          </span>
+          <span class="xiao-bot-body">
+            <span class="xiao-bot-core"></span>
+          </span>
+          <span class="xiao-bot-arm xiao-bot-arm-left"></span>
+          <span class="xiao-bot-arm xiao-bot-arm-right"></span>
+        </span>
         <span class="sr-only">Open Xiao O assistant</span>
       </button>
       <div class="xiao-panel" id="xiao-panel" hidden>
