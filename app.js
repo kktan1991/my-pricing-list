@@ -88,7 +88,8 @@
   });
 
   /* ---------- n8n connection + intake form ---------- */
-  const XIAO_O_WEBHOOK_URL = "https://n8n-kktan.zeabur.app/webhook/0442b812-132b-44bb-964c-6a2ef290962d";
+  const XIAO_O_WEBHOOK_URL = "https://n8n-kktan.zeabur.app/webhook/ai-omic-xiao-o";
+  const INTAKE_WEBHOOK_URL = "https://n8n-kktan.zeabur.app/webhook/0442b812-132b-44bb-964c-6a2ef290962d";
   const INTAKE_FORM_URL = "https://my-pricing-list.zeabur.app/intake-form";
   const intakeForm = document.querySelector("[data-intake-form]");
   const summaryOut = document.querySelector("[data-summary]");
@@ -114,8 +115,8 @@
     return payload;
   }
 
-  async function postToXiaoON8n(payload) {
-    const response = await fetch(XIAO_O_WEBHOOK_URL, {
+  async function postToXiaoON8n(payload, url = XIAO_O_WEBHOOK_URL) {
+    const response = await fetch(url, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
@@ -161,7 +162,7 @@
         message: summary,
         fields: formToPayload(intakeForm),
         intakeUrl: INTAKE_FORM_URL
-      });
+      }, INTAKE_WEBHOOK_URL);
       showSummary(summary, "Submitted to AI Omic. We will reply within 1 business day.");
       intakeForm.reset();
     } catch (error) {
